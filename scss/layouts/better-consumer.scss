@@ -1,0 +1,154 @@
+$breakpoints: (
+	'xs-phone': 320px,
+	'phone': 480px,
+	'tablet': 768px,
+	'desktop': 1024px,
+	'widescreen': 1200px
+	);
+
+// keywords
+$media-expressions: (
+	'screen': 'screen',
+	'print': 'print',
+	'handheld': 'handheld',
+	'landscape': '(orientation: landscape)',
+	'portrait': '(orientation: portrait)',
+	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+	);
+
+// ligatured operators ≥ ≤
+
+@import '../vendors/include-media';
+@import '../base/mixins';
+@import '../base/variables';
+@import '../base/helpers';
+
+.better-consumer {
+	padding: 35px 0;
+
+	@include media(">=desktop") {
+		padding: 40px 0;
+	}
+}
+
+.better-consumer__heading {
+	font-size: 30px;
+	font-weight: 400;
+	text-align: center;
+	margin: 0 0 30px;
+
+	@include media(">=desktop") {
+		font-size: 61px;
+		margin: 0 0 41px;
+	}
+}
+
+.better-consumer__content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0 0 25px;
+
+	@include media(">=tablet") {
+		margin: 0 0 40px;
+	}
+
+	.txt-holder,
+	.img-holder {
+		width: 100%;
+
+		@include media(">=tablet") {
+			width: 50%;
+		}
+	}
+
+	.txt-holder {
+		@include media(">=tablet") {
+			padding: 23px 0 0 0;
+		}
+	}
+
+	.better-consumer__paragraph {
+		margin: 0;
+		line-height: 2;
+		font-size: 18px;
+	}
+
+	.img-holder {
+		text-align: center;
+
+		@include media(">=tablet") {
+			padding: 0 20px;
+		}
+
+		img {
+			width: 100%;
+			max-width: 471px;
+			border-radius: 12px;
+		}
+	}
+}
+
+.better-consumer__content-center {
+	background: #eeeded;
+	max-width: 821px;
+	padding: 26px 25px 26px;
+	border-radius: 12px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+
+	.holder {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include media("<tablet") {
+			flex-wrap: wrap;
+		}
+	}
+
+	.icon-holder {
+		display: block;
+		width: 100%;
+		max-width: 300px;
+		margin: 0 auto;
+		text-align: center;
+
+		@include media(">=tablet") {
+			max-width: 145px;
+			width: 100%;
+		}
+
+		img {
+			max-width: 180px;
+			width: 100%;
+
+			@include media(">=tablet") {
+				width: 100%;
+			}
+		}
+	}
+
+	.txt-holder {
+		width: 100%;
+
+		@include media(">=tablet") {
+			padding: 0 15px 0 0;
+		}
+	}
+
+	.better-consumer__paragraph {
+		font-size: 21px;
+		line-height: 1.7;
+		margin: 0;
+
+		i {
+			font-size: 18px;
+			line-height: 2;
+		}
+	}
+}

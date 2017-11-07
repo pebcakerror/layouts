@@ -1,0 +1,74 @@
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.ellipsis {
+  white-space: nowrap;
+  /* 1 */
+  text-overflow: ellipsis;
+  /* 2 */
+  overflow: hidden; }
+
+/* Monthly Withdrawals */
+.monthly-withdrawals {
+  padding: 25px 0 20px;
+  background: #73c1ec;
+  color: #fff;
+  font: 18px/2 "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif; }
+  @media (min-width: 768px) {
+    .monthly-withdrawals {
+      padding: 62px 0 52px; } }
+  @media (min-width: 1024px) {
+    .monthly-withdrawals {
+      font-size: 24px;
+      line-height: 30px; } }
+  .monthly-withdrawals *, .monthly-withdrawals *:before, .monthly-withdrawals *:after {
+    box-sizing: border-box; }
+
+.monthly-withdrawals__heading {
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 300;
+  margin: 0 0 15px;
+  color: #fff; }
+  @media (min-width: 1024px) {
+    .monthly-withdrawals__heading {
+      font-size: 60px;
+      margin: 0 0 10px; } }
+
+.monthly-withdrawals__paragraph {
+  margin: 0 0 20px;
+  color: #fff;
+  font: 18px/2 "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif; }
+  @media (min-width: 768px) {
+    .monthly-withdrawals__paragraph {
+      margin: 0 0 28px; } }
+  @media (min-width: 1024px) {
+    .monthly-withdrawals__paragraph {
+      font-size: 24px;
+      line-height: 30px; } }
+
+.monthly-withdrawals__text {
+  display: block;
+  margin: 0 0 10px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.2; }
+  @media (min-width: 768px) {
+    .monthly-withdrawals__text {
+      font-size: 28px; } }
+
+.monthly-withdrawals__average-value {
+  display: block;
+  font-size: 35px;
+  line-height: 1.2;
+  font-weight: 300;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .monthly-withdrawals__average-value {
+      font-size: 60px;
+      margin: 0 0 15px; } }
+
+/*# sourceMappingURL=monthly-withdrawals.css.map */

@@ -1,0 +1,98 @@
+$breakpoints: (
+	'xs-phone': 320px,
+	'phone': 480px,
+	'tablet': 768px,
+	'desktop': 1024px,
+	'widescreen': 1200px
+);
+
+// keywords
+$media-expressions: (
+	'screen': 'screen',
+	'print': 'print',
+	'handheld': 'handheld',
+	'landscape': '(orientation: landscape)',
+	'portrait': '(orientation: portrait)',
+	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+@import '../vendors/include-media';
+@import '../base/mixins';
+@import '../base/variables';
+@import '../base/helpers';
+
+/* Monthly Withdrawals */
+.monthly-withdrawals {
+	padding: 25px 0 20px;
+	background: #73c1ec;
+	color: $white;
+	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+
+	@include media(">=tablet") {
+		padding: 62px 0 52px;
+	}
+
+	@include media(">=desktop") {
+		font-size: 24px;
+		line-height: 30px;
+	}
+
+	*, *:before, *:after {
+		box-sizing: border-box;
+	}
+}
+
+.monthly-withdrawals__heading {
+	text-align: center;
+	font-size: 30px;
+	line-height: 1.2;
+	font-weight: 300;
+	margin: 0 0 15px;
+	color: $white;
+
+	@include media(">=desktop") {
+		font-size: 60px;
+		margin: 0 0 10px;
+	}
+}
+
+.monthly-withdrawals__paragraph {
+	margin: 0 0 20px;
+	color: $white;
+	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+
+	@include media(">=tablet") {
+		margin: 0 0 28px;
+	}
+
+	@include media(">=desktop") {
+		font-size: 24px;
+		line-height: 30px;
+	}
+}
+
+.monthly-withdrawals__text {
+	display: block;
+	margin: 0 0 10px;
+	text-align: center;
+	font-size: 20px;
+	line-height: 1.2;
+
+	@include media(">=tablet") {
+		font-size: 28px;
+	}
+}
+
+.monthly-withdrawals__average-value {
+	display: block;
+	font-size: 35px;
+	line-height: 1.2;
+	font-weight: 300;
+	text-align: center;
+
+	@include media(">=tablet") {
+		font-size: 60px;
+		margin: 0 0 15px;
+	}
+}

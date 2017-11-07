@@ -1,0 +1,260 @@
+$breakpoints: (
+	'xs-phone': 320px,
+	'phone': 480px,
+	'tablet': 768px,
+	'desktop': 1024px,
+	'widescreen': 1200px
+	);
+
+// keywords
+$media-expressions: (
+	'screen': 'screen',
+	'print': 'print',
+	'handheld': 'handheld',
+	'landscape': '(orientation: landscape)',
+	'portrait': '(orientation: portrait)',
+	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+	);
+
+// ligatured operators ≥ ≤
+
+@import '../vendors/include-media';
+@import '../base/mixins';
+@import '../base/variables';
+@import '../base/helpers';
+
+.sharing-process {
+	padding: 35px 0 20px;
+	background: #f4f3f3;
+
+	@include media(">=desktop") {
+		padding: 130px 0 115px;
+	}
+}
+
+.sharing-process__heading {
+	text-align: center;
+	font-size: 30px;
+	font-weight: 400;
+	margin: 0 0 25px;
+
+	@include media(">=desktop") {
+		font-size: 61px;
+		margin: 0 0 81px;
+	}
+}
+
+.process-list {
+	@extend %listreset;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	@include media(">=desktop") {
+		justify-content: space-between;
+	}
+}
+
+.process-list__item {
+	width: 100%;
+	max-width: 380px;
+	margin: 0 0 20px;
+
+	@include media(">=tablet") {
+		width: 50%;
+		padding: 0 4px 0 7px;
+	}
+
+	@include media(">=desktop") {
+		width: 33.33%;
+	}
+
+	@include media(">=widescreen") {
+		max-width: 363px;
+		width: 100%;
+		padding: 0;
+	}
+
+	color: $marine;
+}
+
+.process-list__item--green {
+	color: $green;
+
+	.process-list__head {
+		background: $green;
+	}
+}
+
+.process-list__item--orange {
+	color: $orange;
+
+	.process-list__head {
+		background: $orange;
+	}
+}
+
+.process-list__head {
+	background: $marine;
+	color: $white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 25px 15px;
+	border-top-left-radius: 22px;
+	border-top-right-radius: 22px;
+}
+
+.process-list__number {
+	@include size(24px);
+
+	display: block;
+	border-radius: 50%;
+	border: 2px solid $white;
+	font-size: 22px;
+	line-height: 18px;
+	font-weight: 700;
+	margin: 0 8px 0 0;
+	text-align: center;
+
+	@include media(">=desktop") {
+		@include size(36px);
+
+		font-size: 34px;
+		line-height: 30px;
+		margin: 0 20px 0 0;
+	}
+
+	@include media(">=widescreen") {
+		@include size(44px);
+
+		font-size: 41px;
+		line-height: 38px;
+		margin: 0 20px 0 0;
+	}
+}
+
+.process-list__title {
+	font-size: 20px;
+	font-weight: 600;
+
+
+	@include media(">=desktop") {
+		font-size: 24px;
+	}
+
+	@include media(">=widescreen") {
+		font-size: 27px;
+	}
+}
+
+.process-list__wrap {
+	padding: 10px 15px;
+	border: 3px solid #c6c6c6;
+	border-top: 0;
+	border-bottom-left-radius: 22px;
+	border-bottom-right-radius: 22px;
+	background: $white;
+
+	@include media(">=tablet") {
+		padding: 15px 28px;
+	}
+
+	@include media(">=desktop") {
+	 	min-height: 876px;
+	 }
+}
+
+.process-list__icon-holder {
+	position: relative;
+	max-width: 202px;
+	width: 100%;
+	padding: 0 0 29px;
+	margin: 0 auto 8px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: -25px;
+		right: -25px;
+		border-bottom: 1px solid #95989a;
+
+		@include media(">=desktop") {
+			left: -40px;
+			right: -40px;
+		}
+
+		@include media(">=widescreen") {
+			left: -48px;
+			right: -48px;
+		}
+	}
+}
+
+.process-list__paragraph {
+	font-size: 18px;
+	line-height: 2;
+	margin: 0 0 19px;
+
+	@include media(">=phone") {
+		min-height: 160px;
+	}
+}
+
+[class^="process-list__icon-holder"] {
+	img {
+		width: 100%;
+	}
+}
+
+.process-list__icon-holder--icon05 {
+	max-width: 132px;
+	margin: 0 auto;
+}
+
+.process-list__icon-holder--icon06 {
+	max-width: 174px;
+	margin: 0 auto;
+}
+
+.process-list__icon-holder--icon08 {
+	max-width: 166px;
+	margin: 0 auto;
+}
+
+.process-list__icon-holder--icon12 {
+	max-width: 121px;
+	margin: 0 auto;
+}
+
+.process-list__icon-holder--icon09 {
+	max-width: 273px;
+	margin: 0 auto;
+}
+
+.process-list__icon-holder--icon11 {
+	max-width: 200px;
+	margin: 0 auto;
+}
+
+
+.process-list__info {
+	display: block;
+	margin: 0 0 15px;
+	padding: 8px 0 0;
+	text-align: center;
+
+	@include media(">=phone") {
+		min-height: 70px;
+		margin: 0 0 25px;
+	}
+
+	&:last-child{
+		min-height: auto;
+		padding: 10px 0 0;
+	}
+}

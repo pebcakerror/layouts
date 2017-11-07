@@ -1,0 +1,204 @@
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.ellipsis {
+  white-space: nowrap;
+  /* 1 */
+  text-overflow: ellipsis;
+  /* 2 */
+  overflow: hidden; }
+
+.share-amounts {
+  padding: 35px 0 20px; }
+  @media (min-width: 1024px) {
+    .share-amounts {
+      padding: 97px 0 10px; } }
+
+.share-amounts__heading {
+  font-size: 30px;
+  line-height: 1.18;
+  font-weight: 400;
+  text-align: center;
+  margin: 0; }
+  @media (min-width: 1024px) {
+    .share-amounts__heading {
+      font-size: 61px; } }
+
+.share-amounts__subtitle {
+  display: block;
+  text-align: center;
+  margin: 0 0 30px; }
+  @media (min-width: 1024px) {
+    .share-amounts__subtitle {
+      margin: 0 0 73px; } }
+
+.cost-info {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0 -15px; }
+  @media (min-width: 768px) {
+    .cost-info {
+      display: flex;
+      font-size: 14px;
+      line-height: 1.4;
+      margin: 0; } }
+  @media (min-width: 1024px) {
+    .cost-info {
+      font-size: 18px; } }
+
+.cost-info__col {
+  padding: 0 0 53px;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .cost-info__col {
+      width: 50%;
+      position: relative;
+      z-index: 2; } }
+
+.cost-info__col--basic .cost-info-holder {
+  background: #faa443;
+  text-align: left; }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cost-info__col--basic .cost-info-holder {
+    padding-left: 75px; } }
+
+  .cost-info__col--basic .cost-info-holder:after {
+    content: '';
+    background: #faa443;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: -9999px; }
+
+.cost-info__title {
+  color: #faa443;
+  margin: 0 0 10px;
+  display: block; }
+  @media (min-width: 768px) {
+    .cost-info__title {
+      margin: 0 0 19px; } }
+
+.cost-info-holder {
+  position: relative;
+  padding: 10px 15px; }
+  @media (min-width: 768px) {
+    .cost-info-holder {
+      padding: 35px 15px 37px; } }
+  .cost-info-holder:after {
+    content: '';
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1; }
+
+.cost-info__col--clasic {
+  text-align: center; }
+  .cost-info__col--clasic .cost-info-holder {
+    background: #9669aa; }
+    .cost-info__col--clasic .cost-info-holder:after {
+      content: '';
+      background: #9669aa;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: -9999px; }
+  .cost-info__col--clasic .cost-info__title {
+    color: #9669aa; }
+    @media (min-width: 768px) {
+      .cost-info__col--clasic .cost-info__title {
+        margin-left: 9%; } }
+    @media (min-width: 1024px) {
+      .cost-info__col--clasic .cost-info__title {
+        margin-left: 17%; } }
+  @media (min-width: 1024px) {
+    .cost-info__col--clasic .cost-description {
+      margin: 0 0 0 107px; } }
+  .cost-info__col--clasic .cost-description__txt {
+    margin: 0 0 0 19px;
+    text-align: left; }
+
+.cost-description {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.cost-description__cost {
+  font-size: 32px;
+  font-weight: 300; }
+  @media (min-width: 1024px) {
+    .cost-description__cost {
+      font-size: 65px;
+      letter-spacing: -1.5px; } }
+
+.cost-description__txt {
+  line-height: 1.2;
+  margin: 0 0 0 25px;
+  font-size: 18px; }
+  @media (min-width: 768px) {
+    .cost-description__txt {
+      margin: 0 42px 0 25px;
+      font-size: 26px; } }
+
+.cost-btn-holder {
+  text-align: center; }
+
+.btn-calculate {
+  transition: "background 0.3s ease-in-out";
+  display: inline-block;
+  vertical-align: top;
+  background: #6489d7;
+  color: #fff;
+  padding: 8px 27px 8px;
+  border-radius: 22px;
+  margin: 0 0 30px; }
+  @media (min-width: 1024px) {
+    .btn-calculate {
+      margin: 0 0 42px; } }
+  .btn-calculate:hover {
+    color: #fff;
+    background: #436fc7; }
+
+.save2share {
+  margin: 0 0 30px; }
+  @media (min-width: 1024px) {
+    .save2share {
+      margin: 0 0 50px; } }
+
+.save2share__icon {
+  display: block;
+  width: 93px;
+  margin: 0 auto -2px; }
+  .save2share__icon img {
+    width: 100%; }
+
+.save2share__title sup {
+  font-size: 50%;
+  top: -10px;
+  right: 7px; }
+
+.save2share__title,
+.save2share__optional {
+  display: block;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #6dcad2;
+  line-height: 1.25; }
+  @media (min-width: 1024px) {
+    .save2share__title,
+    .save2share__optional {
+      font-size: 28px; } }
+
+.save2share__optional {
+  font-weight: 100;
+  margin: 0 0 26px; }
+
+.save2share__paragraph {
+  font-size: 18px;
+  line-height: 2;
+  margin: 0 0 15px; }
+
+/*# sourceMappingURL=share-amounts.css.map */

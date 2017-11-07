@@ -1,0 +1,274 @@
+$breakpoints: (
+	'xs-phone': 320px,
+	'phone': 480px,
+	'tablet': 768px,
+	'desktop': 1024px,
+	'widescreen': 1200px
+);
+
+// keywords
+$media-expressions: (
+	'screen': 'screen',
+	'print': 'print',
+	'handheld': 'handheld',
+	'landscape': '(orientation: landscape)',
+	'portrait': '(orientation: portrait)',
+	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+// ligatured operators ≥ ≤
+
+@import '../vendors/include-media';
+@import '../base/mixins';
+@import '../base/variables';
+@import '../base/helpers';
+
+.share-amounts {
+	padding: 35px 0 20px;
+
+	@include media(">=desktop") {
+		padding: 97px 0 10px;
+	}
+}
+
+.share-amounts__heading {
+	font-size: 30px;
+	line-height: 1.18;
+	font-weight: 400;
+	text-align: center;
+	margin: 0;
+
+	@include media(">=desktop") {
+		font-size: 61px;
+	}
+}
+
+.share-amounts__subtitle {
+	display: block;
+	text-align: center;
+	margin: 0 0 30px;
+
+	@include media(">=desktop") {
+		margin: 0 0 73px;
+	}
+}
+
+.cost-info {
+	color: $white;
+	font-size: 18px;
+	line-height: 1.6;
+	margin: 0 -15px;
+
+	@include media(">=tablet") {
+		display: flex;
+		font-size: 14px;
+		line-height: 1.4;
+		margin: 0;
+	}
+
+	@include media(">=desktop") {
+		font-size: 18px;
+	}
+}
+
+.cost-info__col {
+	padding: 0 0 53px;
+	text-align: center;
+
+	@include media(">=tablet") {
+		width: 50%;
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.cost-info__col--basic {
+	.cost-info-holder {
+		background: $orange-light;
+		text-align: left;
+
+		@include media(">=tablet", "<desktop") {
+			padding-left: 75px;
+		}
+
+		&:after {
+			content: '';
+			background: $orange-light;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: -9999px;
+		}
+	}
+}
+
+.cost-info__title {
+	color: $orange-light;
+	margin: 0 0 10px;
+	display: block;
+
+	@include media(">=tablet") {
+		margin: 0 0 19px;
+	}
+}
+
+.cost-info-holder {
+	position: relative;
+	padding: 10px 15px;
+
+	@include media(">=tablet") {
+		padding: 35px 15px 37px;
+	}
+
+	&:after {
+		content: '';
+		top: 0;
+		bottom: 0;
+		position: absolute;
+		z-index: -1;
+	}
+}
+
+.cost-info__col--clasic {
+	text-align: center;
+
+	.cost-info-holder {
+		background: $light-purple;
+
+		&:after {
+			content: '';
+			background: $light-purple;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: -9999px;
+		}
+	}
+
+	.cost-info__title {
+		color: $light-purple;
+
+		@include media(">=tablet") {
+			margin-left: 9%;
+		}
+
+		@include media(">=desktop") {
+			margin-left: 17%;
+		}
+	}
+
+	.cost-description {
+		@include media(">=desktop") {
+			margin: 0 0 0 107px;
+		}
+	}
+
+	.cost-description__txt {
+		margin: 0 0 0 19px;
+		text-align: left;
+	}
+}
+
+.cost-description {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cost-description__cost {
+	font-size: 32px;
+	font-weight: 300;
+
+	@include media(">=desktop") {
+		font-size: 65px;
+		letter-spacing: -1.5px;
+	}
+}
+
+.cost-description__txt {
+	line-height: 1.2;
+	margin: 0 0 0 25px;
+	font-size: 18px;
+
+	@include media(">=tablet") {
+		margin: 0 42px 0 25px;
+		font-size: 26px;
+	}
+}
+
+.cost-btn-holder {
+	text-align: center;
+}
+
+.btn-calculate {
+	@include animate(background);
+
+	display: inline-block;
+	vertical-align: top;
+	background: $dark-blue;
+	color: $white;
+	padding: 8px 27px 8px;
+	border-radius: 22px;
+	margin: 0 0 30px;
+
+	@include media(">=desktop") {
+		margin: 0 0 42px;
+	}
+
+	&:hover{
+		color: $white;
+		background: #436fc7;
+	}
+}
+
+.save2share {
+	margin: 0 0 30px;
+
+	@include media(">=desktop") {
+		margin: 0 0 50px;
+	}
+}
+
+.save2share__icon {
+	display: block;
+	width: 93px;
+	margin: 0 auto -2px;
+
+	img {
+		width: 100%;
+	}
+}
+
+.save2share__title {
+	sup {
+		font-size: 50%;
+		top: -10px;
+		right: 7px;
+	}
+}
+
+.save2share__title,
+.save2share__optional {
+	display: block;
+	text-align: center;
+	font-size: 22px;
+	font-weight: 600;
+	color: $light-marine;
+	line-height: 1.25;
+
+	@include media(">=desktop") {
+		font-size: 28px;
+	}
+}
+
+.save2share__optional {
+	font-weight: 100;
+	margin: 0 0 26px;
+}
+
+.save2share__paragraph {
+	font-size: 18px;
+	line-height: 2;
+	margin: 0 0 15px;
+}

@@ -2,17 +2,20 @@
 // Color calculator - http://razorjam.github.io/sasscolourfunctioncalculator/
 // Color names - http://name-of-color.com/
 
-$gray: #7f7f7f;
 $black: #24292c;
 $white: #fff;
-$light-blue: #7ab2e0;
-$orange: #dd9331;
-$purple: #9669aa;
-$pink: #f0577d;
-$green: #2db16c;
-$light-green: #6bcad2;
-$text-color: #24292c;
-$yellow: #faa443;
+$dark-blue: #6489d7;
+$orange: #ef8c42;
+$orange-light: #faa443;
+$purple: #613061;
+$light-purple: #9669aa;
+$marine: #058791;
+$light-marine: #6dcad2;
+$dark-marine: #3f847a;
+$green: #3db772;
+$dark-green: #2fb9ac;
+
+$text-color: $black;
 
 $base-font-sans-serif: 'Source Sans Pro', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 $base-font-serif: 'Source Serif Pro', 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
@@ -29,7 +32,7 @@ $vertical-rhythm: ($line-height-base * 1em);
 $base-min-width: 320px;
 
 // Liks
-$base-link-color: $light-blue;
+// $base-link-color: $light-blue;
 
 // Buttons 
 $btn-color: $white !default;
@@ -39,9 +42,9 @@ $btn-font-size: inherit !default;
 
 // Forms
 $form-element-padding: $btn-padding !default;
-$form-element-border-color: $gray !default;
+$form-element-border-color: $black !default;
 $form-element-focus-border-color: $black !default;
-$placeholder-color: $gray !default;
+$placeholder-color: $black !default;
 
 // Headers
 $h1-font-size: 30px !default;

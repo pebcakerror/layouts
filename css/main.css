@@ -365,26 +365,32 @@ th {
   /* 2 */
   overflow: hidden; }
 
+body {
+  min-width: 320px; }
+
 #wrapper {
   width: 100%;
   overflow: hidden;
   position: relative;
   min-height: 100vh; }
 
+.content {
+  overflow: hidden; }
+
 .container {
-  max-width: 670px;
+  max-width: 665px;
   padding: 0 15px;
   margin: 0 auto; }
-  .container.md-container {
-    max-width: 940px; }
+  .container.container--md {
+    max-width: 1000px; }
+  .container.container--lg {
+    max-width: 1155px; }
 
-.custom-img-holder {
-  padding: 0 10px;
-  text-align: center; }
-  .custom-img-holder img {
-    display: inline-block;
-    vertical-align: top;
-    max-width: 100%;
-    height: auto; }
+.small-container {
+  max-width: 665px;
+  margin: 0 auto; }
+
+[class*="__paragraph"] {
+  color: #24292c; }
 
 /*# sourceMappingURL=main.css.map */

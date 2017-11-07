@@ -1,0 +1,145 @@
+$breakpoints: (
+	'xs-phone': 320px,
+	'phone': 480px,
+	'tablet': 768px,
+	'desktop': 1024px,
+	'widescreen': 1200px
+);
+
+// keywords
+$media-expressions: (
+	'screen': 'screen',
+	'print': 'print',
+	'handheld': 'handheld',
+	'landscape': '(orientation: landscape)',
+	'portrait': '(orientation: portrait)',
+	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+@import '../vendors/include-media';
+@import '../base/mixins';
+@import '../base/variables';
+@import '../base/helpers';
+
+/* deposit section */
+.deposit-section {
+	padding: 25px 0 20px;
+	color: #6ecbd2;
+	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+	background: $white;
+
+	@include media(">=tablet") {
+		padding: 36px 0 52px;
+	}
+
+	@include media(">=desktop") {
+		line-height: 30px;
+	}
+
+	*, *:before, *:after {
+		box-sizing: border-box;
+	}
+}
+
+.deposit-section__heading {
+	text-align: center;
+	font-size: 30px;
+	line-height: 1.2;
+	font-weight: 300;
+	margin: 0 0 15px;
+	color: #6ecbd2;
+
+	@include media(">=desktop") {
+		font-size: 61px;
+		margin: 0 0 10px;
+	}
+}
+
+.deposit-section__paragraph {
+	margin: 0 0 20px;
+	color: #6ecbd2;
+	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+
+	@include media(">=tablet") {
+		margin: 0 0 28px;
+	}
+
+	@include media(">=desktop") {
+		line-height: 30px;
+		font-size: 24px;
+	}
+}
+
+.deposit-list {
+	@extend %listreset;
+
+	text-align: center;
+	color: #8561a9;
+	padding-top: 10px;
+
+	@include media(">=tablet") {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0 -20px -20px;
+	}
+
+	@include media(">=desktop") {
+		margin: 0 -40px -10px -60px;
+	}
+}
+
+.deposit-list-item {
+	padding: 0 0 45px;
+
+	@include media(">=tablet") {
+		width: 50%;
+		padding: 0 20px 50px;
+	}
+
+	@include media(">=desktop") {
+		width: 33.33%;
+	}
+}
+
+.deposit-list__value,
+.deposit-list__title {
+	display: block;
+	text-transform: capitalize;
+	font-weight: 400;
+	margin: 0 0 8px;
+	font-size: 28px;
+	line-height: 1.2;
+
+	@include media(">=desktop") {
+		font-size: 40px;
+	}
+}
+
+.deposit-list__value {
+	margin: 0 0 15px;
+}
+
+.deposit-list__img-wrap {
+	min-height: 144px;
+	margin: 0 0 10px;
+	text-align: center;
+}
+
+.deposit-list__image {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 100%;
+	height: auto;
+}
+
+.deposit-list__regular {
+	display: block;
+	font-size: 20px;
+	line-height: 1.2px;
+
+	@include media(">=desktop") {
+		font-size: 26px;
+	}
+}

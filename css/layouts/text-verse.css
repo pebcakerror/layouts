@@ -1,0 +1,35 @@
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.ellipsis {
+  white-space: nowrap;
+  /* 1 */
+  text-overflow: ellipsis;
+  /* 2 */
+  overflow: hidden; }
+
+.text-verse {
+  padding: 35px 0;
+  background: #3f847a; }
+  @media (min-width: 1024px) {
+    .text-verse {
+      padding: 91px 0 98px; } }
+
+.text-verse__paragraph {
+  color: #fff;
+  line-height: 2; }
+
+.text-verse__blockquote {
+  color: #fff;
+  margin: 30px 10px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.7; }
+  @media (min-width: 768px) {
+    .text-verse__blockquote {
+      margin: 110px 0 25px;
+      font-size: 22px; } }
+
+/*# sourceMappingURL=text-verse.css.map */

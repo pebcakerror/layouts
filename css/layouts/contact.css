@@ -1,0 +1,121 @@
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.ellipsis {
+  white-space: nowrap;
+  /* 1 */
+  text-overflow: ellipsis;
+  /* 2 */
+  overflow: hidden; }
+
+.contact {
+  padding: 25px 0 20px;
+  color: #24292c;
+  font: 18px/2 "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  background: #fff; }
+  @media (min-width: 768px) {
+    .contact {
+      padding: 39px 0 52px; } }
+  @media (min-width: 1024px) {
+    .contact {
+      line-height: 2; } }
+  .contact *, .contact *:before, .contact *:after {
+    box-sizing: border-box; }
+
+.contact__heading {
+  color: #24292c;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0 0 15px;
+  margin: 0 0 25px;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .contact__heading {
+      font-size: 44px;
+      margin: 0 0 45px; } }
+  @media (min-width: 1024px) {
+    .contact__heading {
+      font-size: 61px;
+      margin: 0 -40px 36px; } }
+
+.contact-info {
+  border-bottom: 1px solid #95989A;
+  widows: 90%;
+  max-width: 700px;
+  margin: auto;
+  padding-bottom: 36px; }
+
+.contact-info__icon-holder {
+  height: 72px;
+  display: flex;
+  align-items: flex-end; }
+
+.contact-info__icon {
+  max-height: 49px;
+  display: block;
+  margin: auto; }
+
+.contact-info__heading {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center; }
+
+.contact-info__phone-number {
+  color: #24292c;
+  font-size: 18px;
+  line-height: 2;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center; }
+
+.contact-form {
+  widows: 90%;
+  max-width: 700px;
+  margin: auto; }
+
+.contact-form__heading-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  margin-top: 36px; }
+
+.contact-form__icon {
+  max-height: 49px;
+  display: block;
+  margin-right: 13px; }
+
+.contact-form__heading {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+
+.contact-form__input-group {
+  border: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 320px;
+  display: block; }
+
+.contact-form .label {
+  color: #24292c;
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 2;
+  margin: 0 0 0.3rem 0;
+  text-align: left; }
+
+.contact-form .button--special-blue {
+  background-color: #7AB2E0; }
+
+/*# sourceMappingURL=contact.css.map */

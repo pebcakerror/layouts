@@ -1,0 +1,97 @@
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.ellipsis {
+  white-space: nowrap;
+  /* 1 */
+  text-overflow: ellipsis;
+  /* 2 */
+  overflow: hidden; }
+
+.direct-sharing {
+  padding: 35px 0 20px; }
+  @media (min-width: 1024px) {
+    .direct-sharing {
+      padding: 80px 0 96px; } }
+
+.direct-sharing__heading {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 0 15px; }
+  @media (min-width: 1024px) {
+    .direct-sharing__heading {
+      font-size: 61px;
+      margin: 0 0 19px; } }
+
+.direct-sharing__paragraph {
+  margin: 0 0 20px;
+  font-size: 18px; }
+  @media (min-width: 1024px) {
+    .direct-sharing__paragraph {
+      line-height: 2;
+      margin: 0 0 35px; } }
+
+.direct-sharing__img-holder {
+  width: 274px;
+  margin: 0 auto 5px; }
+  .direct-sharing__img-holder img {
+    width: 100%; }
+
+.direct-sharing__txt-holder .title {
+  text-align: center;
+  color: #ef8c42;
+  font-weight: 700;
+  font-size: 22px;
+  margin: 0 0 5px; }
+  @media (min-width: 1024px) {
+    .direct-sharing__txt-holder .title {
+      font-size: 27px; } }
+.direct-sharing__txt-holder .title--green {
+  color: #2fb9ac; }
+
+.direct-sharing__txt-holder--last {
+  margin: 0 0 35px; }
+  @media (min-width: 1024px) {
+    .direct-sharing__txt-holder--last {
+      margin: 0 0 100px; } }
+
+.direct-sharing-icon {
+  position: relative;
+  display: block;
+  padding: 30px 0;
+  width: 56px;
+  margin: 0 auto 10px;
+  overflow-y: hidden; }
+  @media (min-width: 1024px) {
+    .direct-sharing-icon {
+      padding: 54px 0 34px;
+      margin: -33px auto 4px; } }
+  .direct-sharing-icon:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-left: 3px dashed #ef8c42;
+    z-index: -1; }
+  .direct-sharing-icon img {
+    width: 100%;
+    position: relative;
+    z-index: 3; }
+
+.direct-sharing__iframe-video {
+  width: 100%;
+  margin: 0 auto;
+  border: 0; }
+  @media (min-width: 480px) {
+    .direct-sharing__iframe-video {
+      height: 250px; } }
+  @media (min-width: 768px) {
+    .direct-sharing__iframe-video {
+      height: 305px; } }
+
+/*# sourceMappingURL=direct-sharing.css.map */

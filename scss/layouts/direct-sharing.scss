@@ -1,0 +1,135 @@
+$breakpoints: (
+	'xs-phone': 320px,
+	'phone': 480px,
+	'tablet': 768px,
+	'desktop': 1024px,
+	'widescreen': 1200px
+	);
+
+// keywords
+$media-expressions: (
+	'screen': 'screen',
+	'print': 'print',
+	'handheld': 'handheld',
+	'landscape': '(orientation: landscape)',
+	'portrait': '(orientation: portrait)',
+	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+	);
+
+// ligatured operators ≥ ≤
+
+@import '../vendors/include-media';
+@import '../base/mixins';
+@import '../base/variables';
+@import '../base/helpers';
+
+.direct-sharing {
+	padding: 35px 0 20px;
+
+	@include media(">=desktop") {
+		padding: 80px 0 96px;
+	}
+}
+
+.direct-sharing__heading {
+	text-align: center;
+	font-size: 32px;
+	font-weight: 400;
+	margin: 0 0 15px;
+
+	@include media(">=desktop") {
+		font-size: 61px;
+		margin: 0 0 19px;
+	}
+}
+
+.direct-sharing__paragraph {
+	margin: 0 0 20px;
+	font-size: 18px;
+
+	@include media(">=desktop") {
+		line-height: 2;
+		margin: 0 0 35px;
+	}
+}
+
+.direct-sharing__img-holder {
+	width: 274px;
+	margin: 0 auto 5px;
+
+	img {
+		width: 100%;
+	}
+}
+
+.direct-sharing__txt-holder {
+	.title {
+		text-align: center;
+		color: $orange;
+		font-weight: 700;
+		font-size: 22px;
+		margin: 0 0 5px;
+
+		@include media(">=desktop") {
+			font-size: 27px;
+		}
+	}
+
+	.title--green {
+		color: $dark-green;
+	}
+}
+
+.direct-sharing__txt-holder--last {
+	margin: 0 0 35px;
+
+	@include media(">=desktop") {
+		margin: 0 0 100px;
+	}
+}
+
+.direct-sharing-icon {
+	position: relative;
+	display: block;
+	padding: 30px 0;
+	width: 56px;
+	margin: 0 auto 10px;
+	overflow-y: hidden;
+
+	@include media(">=desktop") {
+		padding: 54px 0 34px;
+		margin: -33px auto 4px;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		bottom: 0;
+		transform: translateX(-50%);
+		border-left: 3px dashed $orange;
+		z-index: -1;
+	}
+
+	img {
+		width: 100%;
+		position: relative;
+		z-index: 3;
+	}
+}
+
+.direct-sharing__iframe-video {
+	width: 100%;
+	margin: 0 auto;
+	border: 0;
+
+	@include media(">=phone") {
+		height: 250px;
+	}
+
+	@include media(">=tablet") {
+		height: 305px;
+	}
+}

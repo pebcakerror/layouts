@@ -1,0 +1,171 @@
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.ellipsis {
+  white-space: nowrap;
+  /* 1 */
+  text-overflow: ellipsis;
+  /* 2 */
+  overflow: hidden; }
+
+/* switching membership */
+.switching-membership {
+  padding: 25px 0 20px;
+  color: #24292c;
+  font: 18px/2 "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  background: #fff; }
+  @media (min-width: 768px) {
+    .switching-membership {
+      padding: 39px 0 52px; } }
+  @media (min-width: 1024px) {
+    .switching-membership {
+      line-height: 2; } }
+  .switching-membership *, .switching-membership *:before, .switching-membership *:after {
+    box-sizing: border-box; }
+
+.switching-membership__heading {
+  margin: 0 0 25px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 300;
+  margin: 0 0 15px;
+  color: #24292c; }
+  @media (min-width: 768px) {
+    .switching-membership__heading {
+      font-size: 44px;
+      margin: 0 0 45px; } }
+  @media (min-width: 1024px) {
+    .switching-membership__heading {
+      font-size: 61px;
+      margin: 0 -40px 36px; } }
+
+.switching-membership__alert {
+  color: #dd9331;
+  font-weight: 600;
+  display: block;
+  position: relative;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 0 0 55px; }
+  @media (min-width: 768px) {
+    .switching-membership__alert {
+      font-size: 18px;
+      margin: 0 0 45px; } }
+  @media (min-width: 1024px) {
+    .switching-membership__alert {
+      font-size: 27px;
+      margin: 0 0 51px; } }
+
+.switching-membership__icon {
+  width: 25px;
+  height: 25px;
+  border: 2px solid #dd9331;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: top;
+  font-style: normal;
+  margin: -2px 5px 0 0; }
+  @media (min-width: 1024px) {
+    .switching-membership__icon {
+      width: 30px;
+      height: 30px;
+      margin: 3px 13px 0 0;
+      font-size: 24px;
+      line-height: 27px; } }
+
+.membership-info__img-holder {
+  text-align: center;
+  margin: 0 0 21px; }
+  @media (min-width: 768px) {
+    .membership-info__img-holder {
+      min-height: 140px; } }
+
+.membership-info__image {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+  height: auto; }
+
+.membership-info {
+  margin: 0 0 -30px; }
+  @media (min-width: 768px) {
+    .membership-info {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -20px; } }
+  @media (min-width: 1024px) {
+    .membership-info {
+      margin: 0 -80px; } }
+
+.membership-info__col {
+  position: relative;
+  padding: 0 0 20px;
+  margin: 0 0 30px; }
+  @media (min-width: 768px) {
+    .membership-info__col {
+      width: 50%;
+      margin: 0 0 20px;
+      padding: 6px 20px; } }
+  @media (min-width: 1024px) {
+    .membership-info__col {
+      padding: 6px 80px 20px;
+      margin: 0 0 15px; } }
+  @media (min-width: 768px) {
+    .membership-info__col:first-child:after {
+      display: none; } }
+  @media (max-width: 767px) {
+    .membership-info__col:last-child:after {
+      display: none; } }
+  .membership-info__col:after {
+    content: '';
+    left: -9999px;
+    right: -9999px;
+    bottom: 0;
+    position: absolute;
+    height: 2px;
+    background: #95989a; }
+    @media (min-width: 768px) {
+      .membership-info__col:after {
+        top: 0;
+        bottom: 0;
+        right: auto;
+        left: -5px;
+        height: auto;
+        width: 2px; } }
+    @media (min-width: 1024px) {
+      .membership-info__col:after {
+        left: 0; } }
+
+.membership-info__title {
+  display: block;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0 0 11px;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .membership-info__title {
+      font-size: 22px; } }
+  @media (min-width: 1024px) {
+    .membership-info__title {
+      font-size: 28px; } }
+
+.membership-info_paragraph {
+  margin: 0 0 20px;
+  color: #24292c;
+  font: 18px/2 "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif; }
+  @media (min-width: 768px) {
+    .membership-info_paragraph {
+      margin: 0 0 28px; } }
+  @media (min-width: 1024px) {
+    .membership-info_paragraph {
+      line-height: 2; } }
+
+/*# sourceMappingURL=switching-membership.css.map */

@@ -1,0 +1,83 @@
+$breakpoints: (
+	'xs-phone': 320px,
+	'phone': 480px,
+	'tablet': 768px,
+	'desktop': 1024px,
+	'widescreen': 1200px
+);
+
+// keywords
+$media-expressions: (
+	'screen': 'screen',
+	'print': 'print',
+	'handheld': 'handheld',
+	'landscape': '(orientation: landscape)',
+	'portrait': '(orientation: portrait)',
+	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+@import '../vendors/include-media';
+@import '../base/mixins';
+@import '../base/variables';
+@import '../base/helpers';
+
+
+
+
+
+
+.get-started {
+	background-color: #F0F0F0;
+
+	@include media(">=tablet") {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+}
+
+.get-started__icon-wrapper {
+	margin: 0 10px;
+}
+
+.get-started__icon {
+	width: 162px;
+	display: block;
+	margin: auto;
+
+	@include media(">=tablet") {
+		width: 235px;
+	}
+}
+
+.get-started__content-wrapper {
+	margin: 0 10px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.get-started__heading {
+	color: $text-color;
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 36px;
+	margin: 0;
+	padding: 0;
+
+	margin-top: 36px;
+
+	@include media(">=tablet") {
+		margin-top: 0;
+	}
+}
+
+.get-started__paragraph {
+	color: $text-color;
+	font-size: 18px;
+	line-height: 2;
+	max-width: 233px;
+}

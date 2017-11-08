@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact</title>
+
+	<link rel="stylesheet" href="https://samaritanministries.org/stylesheets/application.css">
+
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/layouts/contact.css">
+
+
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700%7cSource+Serif+Pro:400,600" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
+	<script>window.jQuery || document.write('<script src="/js/jquery-1.12.4.min.js" defer><\/script>')</script>
+	<script src="/js/jquery.main.js" defer></script>
+
+
+</head>
+<body>
+	<div id="wrapper">
+
+
+
+
+		<!-- contact call to action -->
+		<section class="contact">
+			<h2 class="contact__heading">We'd love to help</h2>
+
+			<div class="contact__option">
+				<div class="contact-info">
+					<div class="contact-info__icon-holder">
+						<img class="contact-info__icon" src="/images/phone.svg" alt="">
+					</div>
+					<h3 class="contact-info__heading">Give us a call</h3>
+					<p class="contact-info__phone-number">(877) 764-2426</p>
+				</div>
+			</div>
+
+			<div class="contact__option">
+
+
+				<style>
+					input#favoriteDayOfTheWeek { display: none; }
+				</style>
+				<form id="download-request" name="download-request" action="" method="POST" class="contact-form">
+
+					<div class="contact-form__heading-wrapper">
+						<img class="contact-form__icon" src="/images/email.svg" alt="">
+						<h3 class="contact-form__heading">E-mail us your questions.</h3>
+					</div>
+
+          <div class="row row--nested">
+						<fieldset class="contact-form__input-group">
+
+              <input type="hidden" name="action" value="contactForm/sendMessage">
+              <input type="hidden" name="redirect" value="/request_info/download/thank_you">
+
+              <input type="hidden" name="fromEmail" value="smchcn@smchcn.net">
+              <input type="hidden" name="toEmail" value="info@smchcn.net">
+              <input type="hidden" name="subject" value="Former Member Inquiry">
+              <input type="text" id="favoriteDayOfTheWeek" name="favoriteDayOfTheWeek">
+
+              <div class="row row--nested">
+                <div class="column column--full column--nested">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="message[Name]">
+                </div>
+
+                <div class="column column--full column--nested">
+                  <label for="email">E-mail</label>
+                  <input type="email" id="email" name="message[Email]">
+                </div>
+
+                <div class="column column--full column--nested">
+                  <label for="phone">Phone</label>
+                  <input type="text" id="phone" name="message[Phone]">
+                </div>
+
+                <div class="column column--full column--nested">
+                  <div>
+                    <p class="left-align label">Questions</p>
+                    <textarea form="download-request" name="message[Questions]" cols="80" rows="6"></textarea>
+                  </div>
+
+                  <div class="center-align">
+                    <p><input type="submit" value="Submit" class="button--navigation button--special-blue"></p>
+                  </div>
+                </div>
+              </div>
+
+						</fieldset>
+          </div>
+        </form>
+
+
+			</div>
+		</section>
+
+
+
+
+	</div>
+</body>
+</html>

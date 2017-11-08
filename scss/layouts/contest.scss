@@ -1,0 +1,94 @@
+$breakpoints: (
+	'xs-phone': 320px,
+	'phone': 480px,
+	'tablet': 768px,
+	'desktop': 1024px,
+	'widescreen': 1200px
+);
+
+// keywords
+$media-expressions: (
+	'screen': 'screen',
+	'print': 'print',
+	'handheld': 'handheld',
+	'landscape': '(orientation: landscape)',
+	'portrait': '(orientation: portrait)',
+	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+@import '../vendors/include-media';
+@import '../base/mixins';
+@import '../base/variables';
+@import '../base/helpers';
+
+
+.contest {
+	padding: 0;
+	margin: 0 auto;
+	color: $base-text-color;
+	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+	background: $white;
+
+	max-width: 600px;
+
+	*, *:before, *:after {
+		box-sizing: border-box;
+	}
+}
+
+.contest__header-wrapper {
+	margin: auto;
+	margin-bottom: 36px;
+	max-width: 600px;
+}
+
+.contest__header-img {
+	display: block;
+	width: 100%;
+	margin: auto;
+	margin-bottom: 36px;
+}
+
+.contest__heading {
+	font-size: 27px;
+	font-weight: 600;
+	line-height: 36px;
+	margin: 0;
+	margin-bottom: 18px;
+	padding: 0 18px;
+	text-align: left;
+}
+
+.contest__description {
+	color: $base-text-color;
+	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+	margin: 0;
+	padding: 0 18px;
+}
+
+
+
+
+.contest-form {
+	margin: auto;
+}
+
+.contest-form__input-group {
+	border: none;
+	margin: 0 auto;
+	padding: 0 18px;
+	// max-width: 320px;
+	display: block;
+}
+
+
+.contest-form .label {
+	color: #24292c;
+	display: block;
+	font-size: 0.8rem;
+	font-weight: 600;
+	line-height: 2;
+	margin: 0 0 0.3rem 0;
+	text-align: left;
+}

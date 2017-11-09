@@ -12,10 +12,13 @@
 
 .contest {
   padding: 0;
-  margin: 0 auto;
+  margin: 36px auto;
   color: #24292c;
   font: 18px/2 "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
   background: #fff;
+  border: 1px solid #D4D4D4;
+  border-radius: 10px;
+  overflow: hidden;
   max-width: 600px; }
   .contest *, .contest *:before, .contest *:after {
     box-sizing: border-box; }
@@ -32,19 +35,19 @@
   margin-bottom: 36px; }
 
 .contest__heading {
-  font-size: 27px;
-  font-weight: 600;
-  line-height: 36px;
+  font-size: 41px;
+  font-weight: 300;
+  line-height: 72px;
   margin: 0;
   margin-bottom: 18px;
-  padding: 0 18px;
+  padding: 0 36px;
   text-align: left; }
 
 .contest__description {
   color: #24292c;
   font: 18px/2 "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
   margin: 0;
-  padding: 0 18px; }
+  padding: 0 36px; }
 
 .contest-form {
   margin: auto; }
@@ -52,8 +55,11 @@
 .contest-form__input-group {
   border: none;
   margin: 0 auto;
-  padding: 0 18px;
+  padding: 0 36px;
   display: block; }
+
+.contest-form__input-group .column {
+  padding: 1rem 0 !important; }
 
 .contest-form .label {
   color: #24292c;

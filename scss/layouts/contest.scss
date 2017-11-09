@@ -25,11 +25,13 @@ $media-expressions: (
 
 .contest {
 	padding: 0;
-	margin: 0 auto;
+	margin: 36px auto;
 	color: $base-text-color;
 	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
 	background: $white;
-
+	border: 1px solid #D4D4D4;
+	border-radius: 10px;
+	overflow: hidden;
 	max-width: 600px;
 
 	*, *:before, *:after {
@@ -51,12 +53,12 @@ $media-expressions: (
 }
 
 .contest__heading {
-	font-size: 27px;
-	font-weight: 600;
-	line-height: 36px;
+	font-size: 41px;
+	font-weight: 300;
+	line-height: 72px;
 	margin: 0;
 	margin-bottom: 18px;
-	padding: 0 18px;
+	padding: 0 36px;
 	text-align: left;
 }
 
@@ -64,7 +66,7 @@ $media-expressions: (
 	color: $base-text-color;
 	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
 	margin: 0;
-	padding: 0 18px;
+	padding: 0 36px;
 }
 
 
@@ -77,9 +79,13 @@ $media-expressions: (
 .contest-form__input-group {
 	border: none;
 	margin: 0 auto;
-	padding: 0 18px;
+	padding: 0 36px;
 	// max-width: 320px;
 	display: block;
+}
+
+.contest-form__input-group .column {
+	padding: 1rem 0 !important;
 }
 
 

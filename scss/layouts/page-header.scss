@@ -51,6 +51,12 @@ $media-expressions: (
 	}
 }
 
+.page-header.no-overlay {
+	&:after {
+		background-color: none;
+	}
+}
+
 .page-header__heading {
 	position: relative;
 	padding: 36px;

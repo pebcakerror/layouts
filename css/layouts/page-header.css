@@ -34,6 +34,9 @@
     background-color: rgba(150, 105, 170, 0.64);
     z-index: 1; }
 
+.page-header.no-overlay:after {
+  background-color: none; }
+
 .page-header__heading {
   position: relative;
   padding: 36px;

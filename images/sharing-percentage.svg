@@ -1,48 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-7344 1242 53 53">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #fff;
-        stroke: #95989a;
-      }
-
-      .cls-2 {
-        clip-path: url(#clip-path);
-      }
-
-      .cls-3, .cls-4 {
-        fill: none;
-        stroke: #6dcad2;
-        stroke-miterlimit: 10;
-        stroke-width: 0.933px;
-      }
-
-      .cls-4 {
-        stroke-linecap: round;
-      }
-    </style>
-    <clipPath id="clip-path">
-      <rect id="_version_:_1.5.0_viewSource_:_x_:_0_y_:_0_width_:_52_height_:_52_resources_:_clipPaths_:_filters_:_g" data-name="{
-	&quot;version&quot;: &quot;1.5.0&quot;,
-	&quot;viewSource&quot;: {
-		&quot;x&quot;: 0,
-		&quot;y&quot;: 0,
-		&quot;width&quot;: 52,
-		&quot;height&quot;: 52
-	},
-	&quot;resources&quot;: {
-		&quot;clipPaths&quot;: {},
-		&quot;filters&quot;: {},
-		&quot;g" class="cls-1" width="53" height="53" transform="translate(595 1127)"/>
-    </clipPath>
-  </defs>
-  <g id="icon" class="cls-2" transform="translate(-7939 115)">
-    <g id="sharingPercentage" transform="translate(595.514 1127.807)">
-      <path id="Path_1611" data-name="Path 1611" class="cls-3" d="M17.539,13.369C17.539,4.941,14.127.933,9.183.933S.653,4.941.653,13.369s3.392,12.6,8.53,12.6S17.539,21.714,17.539,13.369Z" transform="translate(-0.653 -0.933)"/>
-      <path id="Path_1612" data-name="Path 1612" class="cls-3" d="M38.249.933,10.768,52.32" transform="translate(0.373 -0.933)"/>
-      <path id="Path_1613" data-name="Path 1613" class="cls-3" d="M32.508,37.292c0-8.427,3.412-12.436,8.4-12.436s8.489,4.008,8.489,12.436-3.422,12.6-8.5,12.6S32.508,45.638,32.508,37.292Z" transform="translate(2.579 1.494)"/>
-      <path id="Path_1614" data-name="Path 1614" class="cls-4" d="M40.141,13.852,36.914.933l-12.99,4.46" transform="translate(1.708 -0.933)"/>
-      <path id="Path_1615" data-name="Path 1615" class="cls-4" d="M7.931,35.839l3.124,12.939,13.35-4.522" transform="translate(0.085 2.608)"/>
-    </g>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 54 54" style="enable-background:new 0 0 54 54;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#6DCAD2;stroke-width:1.4;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#6DCAD2;stroke-width:1.4;stroke-linecap:round;stroke-miterlimit:10;}
+</style>
+<title>sharingPercentage</title>
+<path class="st0" d="M18.1,14.1C18.1,5.9,14.8,2,10,2S1.7,5.9,1.7,14.1S5,26.4,10,26.4S18.1,22.2,18.1,14.1z"/>
+<path class="st0" d="M39.3,2L12.5,52"/>
+<path class="st0" d="M35.8,39.7c0-8.2,3.3-12.1,8.2-12.1s8.3,3.9,8.3,12.1S48.9,52,44,52S35.8,47.9,35.8,39.7z"/>
+<polyline class="st1" points="42.4,14.6 39.3,2 26.6,6.3 "/>
+<polyline class="st1" points="9.5,39.4 12.5,52 25.5,47.6 "/>
 </svg>

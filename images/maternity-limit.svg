@@ -1,60 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-7344 1368 53 53">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #fff;
-        stroke: #95989a;
-      }
-
-      .cls-2 {
-        clip-path: url(#clip-path);
-      }
-
-      .cls-3, .cls-4 {
-        fill: none;
-      }
-
-      .cls-3, .cls-5 {
-        stroke: #7cb2e1;
-        stroke-miterlimit: 10;
-        stroke-width: 1.017px;
-      }
-
-      .cls-3, .cls-4, .cls-5 {
-        stroke-linecap: round;
-      }
-
-      .cls-4 {
-        stroke: #fff;
-        stroke-linejoin: round;
-        stroke-width: 0.926px;
-      }
-
-      .cls-5 {
-        fill: #7cb2e1;
-      }
-    </style>
-    <clipPath id="clip-path">
-      <rect id="_version_:_1.5.0_viewSource_:_x_:_0_y_:_0_width_:_52_height_:_52_resources_:_clipPaths_:_filters_:_g" data-name="{
-	&quot;version&quot;: &quot;1.5.0&quot;,
-	&quot;viewSource&quot;: {
-		&quot;x&quot;: 0,
-		&quot;y&quot;: 0,
-		&quot;width&quot;: 52,
-		&quot;height&quot;: 52
-	},
-	&quot;resources&quot;: {
-		&quot;clipPaths&quot;: {},
-		&quot;filters&quot;: {},
-		&quot;g" class="cls-1" width="53" height="53" transform="translate(595 1247)"/>
-    </clipPath>
-  </defs>
-  <g id="icon" class="cls-2" transform="translate(-7939 121)">
-    <g id="maternityLimit" transform="translate(599.101 1247.578)">
-      <path id="Path_1616" data-name="Path 1616" class="cls-3" d="M48.513,48.587c0-.071-3.008-16.009-3.008-16.009a3.508,3.508,0,0,0-2.875-2.315,3.559,3.559,0,0,0-2.223.469c-.51.3-6.883,6.24-7.311,6.648-1.417-1.305-5.527-.153-7.739-12.715,14.031-8.178,10.421-4.323,14.785-16.855a3.508,3.508,0,0,0-4.517-4.8,3.569,3.569,0,0,0-2.141,2.61l-2.7,7.79-10.7,5.71c1.937-6.016,2.121-5.863,2.4-7.464A9.442,9.442,0,1,0,8.8,18.3l6.353,3.752c-3.4,4.272,1.111,21.413,9.524,27.164,6.118,4.191,10.125-1.876,15.387-7.882,0,.347,1.377,7.291,1.448,7.647a3.531,3.531,0,1,0,7.056-.306Z" transform="translate(-3.75 -0.504)"/>
-      <line id="Line_12" data-name="Line 12" class="cls-4" y1="6.108" x2="10.686" transform="translate(13.958 33.207)"/>
-      <path id="Path_1617" data-name="Path 1617" class="cls-3" d="M30.671,33.873S25,41.7,32.21,43.335" transform="translate(-1.234 2.882)"/>
-      <path id="Path_1618" data-name="Path 1618" class="cls-5" d="M30.095,41.343C28.422,38.8,31.7,34.2,31.7,34.2,29.024,33.736,26.77,30.3,26.77,30.3l-10.329,6.5a27.97,27.97,0,0,0,4.507,7.311,11.114,11.114,0,0,0,7.291,3.375c2.039,0,5.21-3.814,5.21-3.814A13.031,13.031,0,0,1,30.095,41.343Z" transform="translate(-2.463 2.519)"/>
-    </g>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 54 54" style="enable-background:new 0 0 54 54;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#7CB2E1;stroke-width:1.4;stroke-linecap:round;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;}
+	.st2{fill:#7CB2E1;stroke:#7CB2E1;stroke-width:1.4;stroke-linecap:round;stroke-miterlimit:10;}
+</style>
+<title>maternityLimit</title>
+<path class="st0" d="M49,48.7c0-0.1-3-15.7-3-15.7c-0.4-1.2-1.5-2.1-2.8-2.3c-0.8-0.1-1.5,0.1-2.2,0.5c-0.5,0.3-6.8,6.1-7.2,6.5
+	c-1.4-1.3-5.4-0.2-7.6-12.5C40,17.2,36.5,21,40.7,8.7c0.9-1.7,0.2-3.8-1.5-4.6c-0.9-0.5-2-0.5-2.9-0.1c-1.1,0.4-1.9,1.4-2.1,2.6
+	l-2.7,7.6l-10.5,5.6c1.9-5.9,2.1-5.8,2.4-7.3c0.9-5-2.4-9.9-7.4-10.8S6.1,4.1,5.2,9.1c-0.7,4,1.2,8,4.8,9.9l6.2,3.7
+	c-3.3,4.2,1.1,21,9.3,26.6c6,4.1,9.9-1.8,15.1-7.7c0,0.3,1.3,7.2,1.4,7.5c0.1,1.9,1.7,3.4,3.6,3.3S49.1,50.7,49,48.7L49,48.7z"/>
+<line class="st1" x1="18.7" y1="40.1" x2="29.2" y2="34.1"/>
+<path class="st0" d="M33.9,37.6c0,0-5.6,7.7,1.5,9.3"/>
+<path class="st2" d="M32.2,44.6c-1.6-2.5,1.6-7,1.6-7c-2.6-0.5-4.8-3.8-4.8-3.8l-10.1,6.4c1.1,2.6,2.6,5,4.4,7.2
+	c1.9,2,4.4,3.1,7.1,3.3c2,0,5.1-3.7,5.1-3.7C34.2,46.3,33.1,45.5,32.2,44.6z"/>
 </svg>

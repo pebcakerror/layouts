@@ -10,7 +10,7 @@
   /* 2 */
   overflow: hidden; }
 
-.contest {
+.guitar-contest {
   padding: 0;
   margin: 36px auto;
   color: #24292c;
@@ -20,21 +20,21 @@
   border-radius: 10px;
   overflow: hidden;
   max-width: 600px; }
-  .contest *, .contest *:before, .contest *:after {
+  .guitar-contest *, .guitar-contest *:before, .guitar-contest *:after {
     box-sizing: border-box; }
 
-.contest__header-wrapper {
+.guitar-contest__header-wrapper {
   margin: auto;
   margin-bottom: 36px;
   max-width: 600px; }
 
-.contest__header-img {
+.guitar-contest__header-img {
   display: block;
   width: 100%;
   margin: auto;
   margin-bottom: 36px; }
 
-.contest__heading {
+.guitar-contest__heading {
   font-size: 41px;
   font-weight: 300;
   line-height: 72px;
@@ -43,31 +43,10 @@
   padding: 0 36px;
   text-align: left; }
 
-.contest__description {
+.guitar-contest__description {
   color: #24292c;
   font: 18px/2 "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
   margin: 0;
   padding: 0 36px; }
 
-.contest-form {
-  margin: auto; }
-
-.contest-form__input-group {
-  border: none;
-  margin: 0 auto;
-  padding: 0 36px;
-  display: block; }
-
-.contest-form__input-group .column {
-  padding: 1rem 0 !important; }
-
-.contest-form .label {
-  color: #24292c;
-  display: block;
-  font-size: 0.8rem;
-  font-weight: 600;
-  line-height: 2;
-  margin: 0 0 0.3rem 0;
-  text-align: left; }
-
-/*# sourceMappingURL=contest.css.map */
+/*# sourceMappingURL=guitar-contest.css.map */

@@ -23,7 +23,7 @@ $media-expressions: (
 @import '../base/helpers';
 
 
-.contest {
+.guitar-contest {
 	padding: 0;
 	margin: 36px auto;
 	color: $base-text-color;
@@ -39,20 +39,20 @@ $media-expressions: (
 	}
 }
 
-.contest__header-wrapper {
+.guitar-contest__header-wrapper {
 	margin: auto;
 	margin-bottom: 36px;
 	max-width: 600px;
 }
 
-.contest__header-img {
+.guitar-contest__header-img {
 	display: block;
 	width: 100%;
 	margin: auto;
 	margin-bottom: 36px;
 }
 
-.contest__heading {
+.guitar-contest__heading {
 	font-size: 41px;
 	font-weight: 300;
 	line-height: 72px;
@@ -62,39 +62,9 @@ $media-expressions: (
 	text-align: left;
 }
 
-.contest__description {
+.guitar-contest__description {
 	color: $base-text-color;
 	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
 	margin: 0;
 	padding: 0 36px;
-}
-
-
-
-
-.contest-form {
-	margin: auto;
-}
-
-.contest-form__input-group {
-	border: none;
-	margin: 0 auto;
-	padding: 0 36px;
-	// max-width: 320px;
-	display: block;
-}
-
-.contest-form__input-group .column {
-	padding: 1rem 0 !important;
-}
-
-
-.contest-form .label {
-	color: #24292c;
-	display: block;
-	font-size: 0.8rem;
-	font-weight: 600;
-	line-height: 2;
-	margin: 0 0 0.3rem 0;
-	text-align: left;
 }

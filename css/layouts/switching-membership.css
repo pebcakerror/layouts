@@ -43,7 +43,7 @@
       margin: 0 -40px 36px; } }
 
 .switching-membership__alert {
-  color: #dd9331;
+  color: #ef8c42;
   font-weight: 600;
   display: block;
   position: relative;
@@ -63,7 +63,7 @@
 .switching-membership__icon {
   width: 25px;
   height: 25px;
-  border: 2px solid #dd9331;
+  border: 2px solid #ef8c42;
   font-size: 18px;
   line-height: 20px;
   text-align: center;

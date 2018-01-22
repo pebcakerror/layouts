@@ -16,8 +16,8 @@
   font-size: 18px;
   line-height: 22px;
   text-align: center;
-  background: #6bcad2;
-  color: #24292c;
+  background: #9669aa;
+  color: #fff;
   font: 18px/2 "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: 300; }
   @media (min-width: 768px) {
@@ -40,7 +40,7 @@
   line-height: 1.2;
   font-weight: 400;
   margin: 0 0 15px;
-  color: #24292c; }
+  color: #fff; }
   @media (min-width: 1024px) {
     .call-to-action__heading {
       font-size: 55px;
@@ -48,7 +48,7 @@
 
 .call-to-action__paragraph {
   margin: 0 0 20px;
-  color: #24292c;
+  color: #fff;
   font: 18px/2 "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: 300; }
   @media (min-width: 768px) {

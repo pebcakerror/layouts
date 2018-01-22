@@ -1,0 +1,56 @@
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.ellipsis {
+  white-space: nowrap;
+  /* 1 */
+  text-overflow: ellipsis;
+  /* 2 */
+  overflow: hidden; }
+
+.youth-leader-contest {
+  font: 18px/2 "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  color: #24292c;
+  background: #fff;
+  max-width: 665px;
+  padding: 0 15px;
+  margin: 1rem auto;
+  display: block; }
+  @media (min-width: 1024px) {
+    .youth-leader-contest {
+      max-width: 1102px;
+      display: flex;
+      justify-content: space-between; } }
+  @media (min-width: 1024px) {
+    .youth-leader-contest__description-wrapper {
+      width: 42%; } }
+  .youth-leader-contest__description {
+    font: 18px/2 "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+    color: #24292c;
+    margin: 0 0 18px 0;
+    padding: 0; }
+  .youth-leader-contest__video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    height: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    transform: translateY(0px);
+    margin-bottom: 36px; }
+  .youth-leader-contest__iframe-video {
+    max-width: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  @media (min-width: 1024px) {
+    .youth-leader-contest .form {
+      width: 45%; } }
+  .youth-leader-contest .form__input-group {
+    padding: 0; }
+
+/*# sourceMappingURL=youth-leader-contest.css.map */

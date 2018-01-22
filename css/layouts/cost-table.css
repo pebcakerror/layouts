@@ -69,18 +69,18 @@
   .cost-info__col--basic {
     text-align: right; } }
 .cost-info__col--basic .cost-info-holder {
-  background: #faa443;
+  background: #ef8c42;
   text-align: left; }
 @media (min-width: 768px) and (max-width: 1023px) {
   .cost-info__col--basic .cost-info-holder {
     padding-left: 75px; } }
 
   .cost-info__col--basic .cost-info-holder:after {
-    background: #faa443;
+    background: #ef8c42;
     right: 0;
     left: -9999px; }
 .cost-info__col--basic .cost-info__title {
-  color: #faa443; }
+  color: #ef8c42; }
 @media (min-width: 768px) and (max-width: 1023px) {
   .cost-info__col--basic .cost-info__title {
     max-width: 40%; } }
@@ -257,9 +257,9 @@
   background: #f0567c; }
 
 .cost-item--sharing-item .cost-item__heading {
-  color: #6bcad2; }
+  color: #6dcad2; }
 .cost-item--sharing-item .cost-col__item:after {
-  background: #6bcad2; }
+  background: #6dcad2; }
 
 .cost-item--maternity-item .cost-item__heading {
   color: #7ab2e0; }

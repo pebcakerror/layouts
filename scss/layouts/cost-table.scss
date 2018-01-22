@@ -100,7 +100,7 @@ $media-expressions: (
 	}
 
 	.cost-info-holder {
-		background: $yellow;
+		background: $orange;
 		text-align: left;
 
 		@include media(">=tablet", "<desktop") {
@@ -108,14 +108,14 @@ $media-expressions: (
 		}
 
 		&:after {
-			background: $yellow;
+			background: $orange;
 			right: 0;
 			left: -9999px;
 		}
 	}
 
 	.cost-info__title {
-		color: $yellow;
+		color: $orange;
 
 		@include media(">=tablet", "<desktop") {
 			max-width: 40%;
@@ -133,17 +133,17 @@ $media-expressions: (
 
 .cost-info__col--classic {
 	.cost-info-holder {
-		background: $purple;
+		background: $light-purple;
 
 		&:after {
-			background: $purple;
+			background: $light-purple;
 			left: 0;
 			right: -9999px;
 		}
 	}
 
 	.cost-info__title {
-		color: $purple;
+		color: $light-purple;
 
 		@include media(">=tablet") {
 			margin-left: 9%;
@@ -348,12 +348,12 @@ $media-expressions: (
 
 .cost-item--sharing-item {
 	.cost-item__heading {
-		color: #6bcad2;
+		color: $light-marine;
 	}
 
 	.cost-col__item {
 		&:after {
-			background: $light-green;
+			background: $light-marine;
 		}
 	}
 }
@@ -365,7 +365,7 @@ $media-expressions: (
 
 	.cost-col__item {
 		&:after {
-			background: $light-blue;
+			background: #7ab2e0;
 		}
 	}
 }

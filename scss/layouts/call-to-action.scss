@@ -29,8 +29,8 @@ $media-expressions: (
 	font-size: 18px;
 	line-height: 22px;
 	text-align: center;
-	background: $light-green;
-	color: $black;
+	background: $light-purple;
+	color: $white;
 	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
 	font-weight: 300;
 
@@ -60,7 +60,7 @@ $media-expressions: (
 	line-height: 1.2;
 	font-weight: 400;
 	margin: 0 0 15px;
-	color: #24292c;
+	color: $white;
 
 	@include media(">=desktop") {
 		font-size: 55px;
@@ -70,7 +70,7 @@ $media-expressions: (
 
 .call-to-action__paragraph {
 	margin: 0 0 20px;
-	color: #24292c;
+	color: $white;
 	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
 	font-weight: 300;
 

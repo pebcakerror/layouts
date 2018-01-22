@@ -1,0 +1,84 @@
+$breakpoints: (
+	'xs-phone': 320px,
+	'phone': 480px,
+	'tablet': 768px,
+	'desktop': 1024px,
+	'widescreen': 1200px
+);
+
+// keywords
+$media-expressions: (
+	'screen': 'screen',
+	'print': 'print',
+	'handheld': 'handheld',
+	'landscape': '(orientation: landscape)',
+	'portrait': '(orientation: portrait)',
+	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+@import '../vendors/include-media';
+@import '../base/mixins';
+@import '../base/variables';
+@import '../base/helpers';
+
+
+.youth-leader-contest {
+	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+	color: $base-text-color;
+	background: $white;
+
+	max-width: 665px;
+	padding: 0 15px;
+	margin: 1rem auto;
+	display: block;
+
+	@include media(">=desktop") {
+		max-width: 1102px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+
+	&__description-wrapper {
+		@include media(">=desktop") {
+			width: 42%;
+		}
+	}
+
+	&__description {
+		font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+		color: $base-text-color;
+		margin: 0 0 18px 0;
+		padding: 0;
+	}
+
+	&__video-wrapper {
+	  position: relative;
+	  padding-bottom: 56.25%; /* 16:9 */
+	  height: 0;
+	  border-radius: 10px;
+	  overflow: hidden;
+	  transform: translateY(0px);
+		margin-bottom: 36px;
+	}
+
+  &__iframe-video {
+    max-width: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+	.form {
+		@include media(">=desktop") {
+			width: 45%;
+		}
+
+		&__input-group {
+			padding: 0;
+		}
+	}
+}

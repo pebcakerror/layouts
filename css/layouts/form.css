@@ -1,0 +1,34 @@
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.ellipsis {
+  white-space: nowrap;
+  /* 1 */
+  text-overflow: ellipsis;
+  /* 2 */
+  overflow: hidden; }
+
+.form {
+  margin: auto; }
+
+.form__input-group {
+  border: none;
+  margin: 0 auto;
+  padding: 0 36px;
+  display: block; }
+
+.form__input-group .column {
+  padding: 0 0 1rem 0; }
+
+.form label {
+  color: #24292c;
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 2;
+  margin: 0 0 0.3rem 0;
+  text-align: left; }
+
+/*# sourceMappingURL=form.css.map */

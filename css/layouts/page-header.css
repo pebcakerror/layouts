@@ -35,7 +35,7 @@
     z-index: 1; }
 
 .page-header.no-overlay:after {
-  background-color: none; }
+  background-color: transparent; }
 
 .page-header__heading {
   position: relative;
@@ -48,9 +48,41 @@
   margin: 0; }
   @media (min-width: 480px) {
     .page-header__heading {
+      padding: 54px; } }
+  @media (min-width: 768px) {
+    .page-header__heading {
       padding: 72px; } }
   .page-header__heading img {
     width: 100%;
-    max-width: 730px; }
+    max-width: 730px;
+    display: block;
+    margin: auto; }
+
+.page-header.winterjam17 .page-header__heading img {
+  width: 100%; }
+  @media (min-width: 481px) {
+    .page-header.winterjam17 .page-header__heading img {
+      width: 90%; } }
+  @media (min-width: 1025px) {
+    .page-header.winterjam17 .page-header__heading img {
+      width: 80%; } }
+
+.page-header.winterjam18 .page-header__heading img {
+  width: 100%; }
+  @media (min-width: 481px) {
+    .page-header.winterjam18 .page-header__heading img {
+      width: 90%; } }
+  @media (min-width: 1025px) {
+    .page-header.winterjam18 .page-header__heading img {
+      width: 80%; } }
+
+.page-header.healthcare-confusion .page-header__heading img {
+  width: 70%; }
+  @media (min-width: 481px) {
+    .page-header.healthcare-confusion .page-header__heading img {
+      width: 80%; } }
+  @media (min-width: 1025px) {
+    .page-header.healthcare-confusion .page-header__heading img {
+      width: 90%; } }
 
 /*# sourceMappingURL=page-header.css.map */

@@ -53,7 +53,7 @@ $media-expressions: (
 
 .page-header.no-overlay {
 	&:after {
-		background-color: none;
+		background-color: transparent;
 	}
 }
 
@@ -68,11 +68,56 @@ $media-expressions: (
 	margin: 0;
 
 	@include media(">=phone") {
+		padding: 54px;
+	}
+
+	@include media(">=tablet") {
 		padding: 72px;
 	}
 
 	img {
 		width: 100%;
 		max-width: 730px;
+		display: block;
+		margin: auto;
+	}
+}
+
+
+.page-header.winterjam17 .page-header__heading img {
+	width: 100%;
+
+	@include media(">phone") {
+		width: 90%;
+	}
+
+	@include media(">desktop") {
+		width: 80%;
+	}
+}
+
+
+.page-header.winterjam18 .page-header__heading img {
+	width: 100%;
+
+	@include media(">phone") {
+		width: 90%;
+	}
+
+	@include media(">desktop") {
+		width: 80%;
+	}
+}
+
+
+.page-header.healthcare-confusion .page-header__heading img {
+	width: 70%;
+
+	@include media(">phone") {
+		width: 80%;
+	}
+
+	@include media(">desktop") {
+		width: 90%;
 	}
 }

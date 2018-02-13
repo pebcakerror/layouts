@@ -1,0 +1,45 @@
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.ellipsis {
+  white-space: nowrap;
+  /* 1 */
+  text-overflow: ellipsis;
+  /* 2 */
+  overflow: hidden; }
+
+.healthcare-confusion-intro {
+  background-color: #E5E6E5;
+  padding: 18px; }
+  @media (min-width: 481px) {
+    .healthcare-confusion-intro {
+      padding: 36px; } }
+
+.healthcare-confusion-intro .container {
+  max-width: 900px; }
+
+.healthcare-confusion-intro__heading {
+  color: #74417C;
+  text-align: left;
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 auto 36px; }
+  @media (min-width: 768px) {
+    .healthcare-confusion-intro__heading {
+      font-size: 36px;
+      text-align: center;
+      width: 80%; } }
+  @media (min-width: 1024px) {
+    .healthcare-confusion-intro__heading {
+      font-size: 42px;
+      line-height: 59px; } }
+
+.healthcare-confusion-intro__paragraph {
+  color: #24292c;
+  font-size: 18px;
+  line-height: 29px;
+  margin: 0 0 29px; }
+
+/*# sourceMappingURL=healthcare-confusion-intro.css.map */

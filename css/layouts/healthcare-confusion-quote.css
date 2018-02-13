@@ -1,0 +1,68 @@
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.ellipsis {
+  white-space: nowrap;
+  /* 1 */
+  text-overflow: ellipsis;
+  /* 2 */
+  overflow: hidden; }
+
+.healthcare-confusion-quote {
+  background-color: #74417C;
+  color: #fff;
+  padding: 18px; }
+  @media (min-width: 768px) {
+    .healthcare-confusion-quote {
+      padding: 36px; } }
+  @media (min-width: 1024px) {
+    .healthcare-confusion-quote {
+      padding: 72px; } }
+  .healthcare-confusion-quote__container {
+    margin: 0;
+    padding: 0;
+    margin: auto;
+    max-width: 450px; }
+    @media (min-width: 768px) {
+      .healthcare-confusion-quote__container {
+        max-width: 600px; } }
+    @media (min-width: 1024px) {
+      .healthcare-confusion-quote__container {
+        max-width: 845px; } }
+  .healthcare-confusion-quote__quotation {
+    margin: 0;
+    padding: 0; }
+  .healthcare-confusion-quote__paragraph {
+    color: #fff;
+    font-family: "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 26px;
+    text-align: center;
+    margin: 0 0 18px 0;
+    padding: 0; }
+    @media (min-width: 768px) {
+      .healthcare-confusion-quote__paragraph {
+        font-size: 41px;
+        margin-bottom: 36px; } }
+    @media (min-width: 1024px) {
+      .healthcare-confusion-quote__paragraph {
+        font-size: 55px;
+        line-height: 69px;
+        margin-bottom: 72px; } }
+  .healthcare-confusion-quote__citation {
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center; }
+    @media (min-width: 768px) {
+      .healthcare-confusion-quote__citation {
+        font-size: 26px; } }
+    @media (min-width: 1024px) {
+      .healthcare-confusion-quote__citation {
+        font-size: 40px;
+        line-height: 50px; } }
+
+/*# sourceMappingURL=healthcare-confusion-quote.css.map */

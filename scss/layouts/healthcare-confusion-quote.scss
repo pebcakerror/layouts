@@ -1,0 +1,96 @@
+$breakpoints: (
+	'xs-phone': 320px,
+	'phone': 480px,
+	'tablet': 768px,
+	'desktop': 1024px,
+	'widescreen': 1200px
+);
+
+// keywords
+$media-expressions: (
+	'screen': 'screen',
+	'print': 'print',
+	'handheld': 'handheld',
+	'landscape': '(orientation: landscape)',
+	'portrait': '(orientation: portrait)',
+	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+@import '../vendors/include-media';
+@import '../base/mixins';
+@import '../base/variables';
+@import '../base/helpers';
+
+
+.healthcare-confusion-quote {
+	background-color: $purple;
+	color: $white;
+	padding: 18px;
+
+	@include media('>=tablet') {
+		padding: 36px;
+	}
+
+	@include media('>=desktop') {
+		padding: 72px;
+	}
+
+	&__container {
+		margin: 0;
+		padding: 0;
+		margin: auto;
+		max-width: 450px;
+
+		@include media('>=tablet') {
+			max-width: 600px;
+		}
+
+		@include media('>=desktop') {
+			max-width: 845px;
+		}
+	}
+
+	&__quotation {
+		margin: 0;
+		padding: 0;
+	}
+
+	&__paragraph {
+		color: $white;
+		font-family: $base-font-sans-serif;
+		font-size: 26px;
+		text-align: center;
+		margin: 0 0 18px 0;
+		padding: 0;
+
+		@include media('>=tablet') {
+			font-size: 41px;
+			margin-bottom: 36px;
+		}
+
+		@include media('>=desktop') {
+			font-size: 55px;
+			line-height: 69px;
+			margin-bottom: 72px;
+		}
+	}
+
+	&__citation {
+		margin: 0;
+		padding: 0;
+		font-family: $base-font-sans-serif;
+		font-weight: 300;
+		font-size: 18px;
+		text-align: center;
+
+		@include media('>=tablet') {
+			font-size: 26px;
+		}
+
+		@include media('>=desktop') {
+			font-size: 40px;
+			line-height: 50px;
+		}
+	}
+}

@@ -26,10 +26,10 @@ $media-expressions: (
 .healthcare-confusion-quote {
 	background-color: $purple;
 	color: $white;
-	padding: 18px;
+	padding: 36px;
 
 	@include media('>=tablet') {
-		padding: 36px;
+		padding: 54px;
 	}
 
 	@include media('>=desktop') {
@@ -66,13 +66,14 @@ $media-expressions: (
 
 		@include media('>=tablet') {
 			font-size: 41px;
+			line-height: 52px;
 			margin-bottom: 36px;
 		}
 
 		@include media('>=desktop') {
 			font-size: 55px;
 			line-height: 69px;
-			margin-bottom: 72px;
+			margin-bottom: 45px;
 		}
 	}
 

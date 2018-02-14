@@ -26,10 +26,14 @@ $media-expressions: (
 
 .healthcare-confusion-intro {
 	background-color: $gray-background;
-	padding: 18px;
+	padding: 32px;
 
-	@include media('>phone') {
-		padding: 36px;
+	@include media('>=tablet') {
+		padding: 54px;
+	}
+
+	@include media('>=desktop') {
+		padding: 72px 0;
 	}
 }
 
@@ -39,20 +43,20 @@ $media-expressions: (
 
 .healthcare-confusion-intro__heading {
 	color: $purple;
-	text-align: left;
+	text-align: center;
 	font-size: 26px;
 	font-weight: 400;
 	margin: 0 auto 36px;
+	width: 80%;
 
 	@include media('>=tablet') {
 		font-size: 36px;
 		text-align: center;
-		width: 80%;
 	}
 
 	@include media('>=desktop') {
 		font-size: 42px;
-		line-height: 59px;
+		line-height: 52px;
 	}
 }
 

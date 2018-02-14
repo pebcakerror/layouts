@@ -13,10 +13,10 @@
 .healthcare-confusion-quote {
   background-color: #74417C;
   color: #fff;
-  padding: 18px; }
+  padding: 36px; }
   @media (min-width: 768px) {
     .healthcare-confusion-quote {
-      padding: 36px; } }
+      padding: 54px; } }
   @media (min-width: 1024px) {
     .healthcare-confusion-quote {
       padding: 72px; } }
@@ -44,12 +44,13 @@
     @media (min-width: 768px) {
       .healthcare-confusion-quote__paragraph {
         font-size: 41px;
+        line-height: 52px;
         margin-bottom: 36px; } }
     @media (min-width: 1024px) {
       .healthcare-confusion-quote__paragraph {
         font-size: 55px;
         line-height: 69px;
-        margin-bottom: 72px; } }
+        margin-bottom: 45px; } }
   .healthcare-confusion-quote__citation {
     margin: 0;
     padding: 0;

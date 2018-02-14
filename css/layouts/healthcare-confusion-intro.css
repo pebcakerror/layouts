@@ -12,29 +12,32 @@
 
 .healthcare-confusion-intro {
   background-color: #E5E6E5;
-  padding: 18px; }
-  @media (min-width: 481px) {
+  padding: 32px; }
+  @media (min-width: 768px) {
     .healthcare-confusion-intro {
-      padding: 36px; } }
+      padding: 54px; } }
+  @media (min-width: 1024px) {
+    .healthcare-confusion-intro {
+      padding: 72px 0; } }
 
 .healthcare-confusion-intro .container {
   max-width: 900px; }
 
 .healthcare-confusion-intro__heading {
   color: #74417C;
-  text-align: left;
+  text-align: center;
   font-size: 26px;
   font-weight: 400;
-  margin: 0 auto 36px; }
+  margin: 0 auto 36px;
+  width: 80%; }
   @media (min-width: 768px) {
     .healthcare-confusion-intro__heading {
       font-size: 36px;
-      text-align: center;
-      width: 80%; } }
+      text-align: center; } }
   @media (min-width: 1024px) {
     .healthcare-confusion-intro__heading {
       font-size: 42px;
-      line-height: 59px; } }
+      line-height: 52px; } }
 
 .healthcare-confusion-intro__paragraph {
   color: #24292c;

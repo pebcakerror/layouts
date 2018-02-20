@@ -1,0 +1,90 @@
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.ellipsis {
+  white-space: nowrap;
+  /* 1 */
+  text-overflow: ellipsis;
+  /* 2 */
+  overflow: hidden; }
+
+.bios {
+  background-color: #74417C;
+  padding: 18px; }
+  @media (min-width: 768px) {
+    .bios {
+      padding: 54px; } }
+  @media (min-width: 1024px) {
+    .bios {
+      padding: 72px; } }
+
+.bios__heading {
+  color: #fff;
+  font-family: "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 26px;
+  font-weight: 300;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 900px;
+  margin-bottom: 54px; }
+  @media (min-width: 768px) {
+    .bios__heading {
+      text-align: center;
+      font-size: 36px; } }
+  @media (min-width: 1024px) {
+    .bios__heading {
+      font-size: 42px;
+      line-height: 50px;
+      font-weight: 300; } }
+
+.bios__container {
+  max-width: 830px;
+  margin: auto; }
+
+.bio {
+  display: flex;
+  margin-bottom: 36px;
+  flex-direction: column; }
+  @media (min-width: 768px) {
+    .bio {
+      flex-direction: row; } }
+  @media (min-width: 1024px) {
+    .bio {
+      align-items: center; } }
+
+.bio__image {
+  display: block;
+  width: 50%;
+  height: auto;
+  max-width: 240px; }
+
+@media (min-width: 768px) {
+  .bio__description {
+    padding-left: 36px; } }
+
+.bio__heading {
+  color: #fff;
+  font-family: "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0; }
+  @media (min-width: 1024px) {
+    .bio__heading {
+      font-size: 25px; } }
+
+.bio__paragraph {
+  color: #fff;
+  font-family: "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 16px;
+  line-height: 2;
+  font-weight: 300; }
+  @media (min-width: 1024px) {
+    .bio__paragraph {
+      font-size: 18px;
+      line-height: 36px; } }
+
+/*# sourceMappingURL=bios.css.map */

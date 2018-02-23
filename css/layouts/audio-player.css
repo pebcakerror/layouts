@@ -1,0 +1,73 @@
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.ellipsis {
+  white-space: nowrap;
+  /* 1 */
+  text-overflow: ellipsis;
+  /* 2 */
+  overflow: hidden; }
+
+/* Balanced Stewardship */
+.audio-player {
+  background-color: #E5E6E5;
+  margin: 0;
+  padding: 0; }
+
+.audio-player__container {
+  width: 284px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around; }
+  @media (min-width: 640px) {
+    .audio-player__container {
+      width: 568px;
+      justify-content: center; } }
+
+.audio-player__play-pause-button {
+  background-color: #74417C;
+  height: 58px;
+  width: 58px;
+  margin: 0;
+  padding: 0; }
+
+.audio-player__play-pause-button:hover {
+  background-color: #9669aa; }
+
+.audio-player__icon {
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.audio-player__icon--play {
+  background-image: url("/images/play-icon.png");
+  position: relative;
+  left: 4px; }
+
+.audio-player__icon--pause {
+  background-image: url("/images/pause-icon.png");
+  position: relative;
+  left: 1px; }
+
+.audio-player__heading {
+  color: #74417C;
+  font-size: 25px;
+  line-height: 58px;
+  font-weight: 600;
+  text-align: center; }
+  @media (min-width: 640px) {
+    .audio-player__heading {
+      width: 140px;
+      line-height: 29px; } }
+
+.audio-player__waveform {
+  min-width: 284px; }
+
+/*# sourceMappingURL=audio-player.css.map */

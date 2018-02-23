@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Audio Player</title>
+
+
+	<link rel="stylesheet" type="text/css" href="https://samaritanministries.org/stylesheets/application.css">
+
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/css/layouts/audio-player.css">
+
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700%7cSource+Serif+Pro:400,600" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
+	<script>window.jQuery || document.write('<script src="/js/jquery-1.12.4.min.js" defer><\/script>')</script>
+	<script src="/js/jquery.main.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.4.0/wavesurfer.min.js"></script>
+
+	<script src="/js/audio-player.js" defer></script>
+
+</head>
+
+<body>
+
+
+	<div class="content">
+
+
+
+		<section class="audio-player">
+			<div class="audio-player__container">
+				<div class="audio-player__controls">
+					<button class="audio-player__play-pause-button" data-action="play-pause">
+						<span class="audio-player__icon audio-player__icon--play"></span>
+					</button>
+				</div>
+				<h2 class="audio-player__heading">Preview Program</h2>
+				<div class="audio-player__waveform-container">
+	      	<div class="audio-player__waveform" id="waveform"></div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+</body>
+</html>

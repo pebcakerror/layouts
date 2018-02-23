@@ -1,0 +1,101 @@
+$breakpoints: (
+	'tiny': 320px,
+	'small': 480px,
+	'medium': 640px,
+	'large': 1024px,
+	'huge': 1200px
+);
+
+// keywords
+$media-expressions: (
+	'screen': 'screen',
+	'print': 'print',
+	'handheld': 'handheld',
+	'landscape': '(orientation: landscape)',
+	'portrait': '(orientation: portrait)',
+	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+@import '../vendors/include-media';
+@import '../base/mixins';
+@import '../base/variables';
+@import '../base/helpers';
+
+/* Balanced Stewardship */
+.audio-player {
+	background-color: $gray-background;
+	margin: 0;
+	padding: 0;
+}
+
+.audio-player__container {
+	width: 284px;
+	margin: auto;
+
+	display: flex;
+	flex-wrap: wrap;
+  align-items: center;
+	justify-content: space-around;
+
+	@include media(">=medium") {
+		width: 568px;
+		justify-content: center;
+	}
+
+}
+
+.audio-player__controls {}
+
+.audio-player__play-pause-button {
+	background-color: $purple;
+	height: 58px;
+	width: 58px;
+	margin: 0;
+	padding: 0;
+}
+
+.audio-player__play-pause-button:hover {
+	background-color: $light-purple;
+}
+
+.audio-player__icon {
+	display: block;
+	width: 36px;
+	height: 36px;
+	margin: auto;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.audio-player__icon--play {
+	background-image: url('/images/play-icon.png');
+	position: relative;
+	left: 4px;
+}
+
+.audio-player__icon--pause {
+	background-image: url('/images/pause-icon.png');
+	position: relative;
+	left: 1px;
+}
+
+.audio-player__heading {
+	color: $purple;
+	font-size: 25px;
+	line-height: 58px;
+	font-weight: 600;
+	text-align: center;
+
+
+	@include media(">=medium") {
+		width: 140px;
+		line-height: 29px;
+	}
+}
+
+.audio-player__waveform-container {
+}
+.audio-player__waveform {
+	min-width: 284px;
+}

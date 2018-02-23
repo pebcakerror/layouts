@@ -10,6 +10,79 @@
   /* 2 */
   overflow: hidden; }
 
+.dash-spinner, .is-loading:after, .audio-player__play-pause-button.is-loading:after {
+  -webkit-animation: rotation 1250ms infinite cubic-bezier(0.75, 0.28, 0.44, 0.82);
+  -moz-animation: rotation 1250ms infinite cubic-bezier(0.75, 0.28, 0.44, 0.82);
+  -ms-animation: rotation 1250ms infinite cubic-bezier(0.75, 0.28, 0.44, 0.82);
+  -o-animation: rotation 1250ms infinite cubic-bezier(0.75, 0.28, 0.44, 0.82);
+  animation: rotation 1250ms infinite cubic-bezier(0.75, 0.28, 0.44, 0.82);
+  position: relative;
+  border-radius: 100%;
+  border: 6px solid rgba(0, 0, 0, 0.15);
+  border-top: 6px solid black;
+  float: left;
+  height: 90px;
+  width: 90px;
+  top: calc(50% - (90px/2));
+  left: calc(50% - (90px/2)); }
+  .dash-spinner.small, .small.is-loading:after {
+    border-width: 3px;
+    height: 32px;
+    width: 32px;
+    top: calc(50% - (32px/2));
+    left: calc(50% - (32px/2)); }
+
+.is-loading {
+  background-color: #f2f2f2;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; }
+  .is-loading:after {
+    content: "";
+    position: absolute; }
+  .is-loading > * {
+    visibility: hidden; }
+
+.audio-player__play-pause-button.is-loading {
+  pointer-events: none;
+  color: transparent;
+  position: relative; }
+  .audio-player__play-pause-button.is-loading:hover, .audio-player__play-pause-button.is-loading:active, .audio-player__play-pause-button.is-loading:focus {
+    color: transparent; }
+  .audio-player__play-pause-button.is-loading:after {
+    content: "";
+    border-width: 3px;
+    border-color: rgba(255, 255, 255, 0.15);
+    border-top-color: white;
+    position: absolute;
+    height: 36px;
+    width: 36px;
+    top: calc(50% - (36px/2));
+    left: calc(50% - (36px/2)); }
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(359deg); } }
+@-moz-keyframes rotation {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(359deg); } }
+@-o-keyframes rotation {
+  from {
+    -o-transform: rotate(0deg); }
+  to {
+    -o-transform: rotate(359deg); } }
+@keyframes rotation {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(359deg); } }
 /* Balanced Stewardship */
 .audio-player {
   background-color: #E5E6E5;

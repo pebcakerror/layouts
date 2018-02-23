@@ -1,5 +1,8 @@
 var AudioPlayer = function(options) {
   var playPauseButton = document.querySelector("[data-action='play-pause']");
+  var icon = playPauseButton.querySelector(".audio-player__icon")
+
+  playPauseButton.classList.toggle('is-loading');
 
   var wavesurfer = WaveSurfer.create({
     container: '#waveform',
@@ -8,21 +11,19 @@ var AudioPlayer = function(options) {
     cursorColor: '#E5E6E5',
     barWidth: 4,
     height: 58,
-    // maxCanvasWidth: 284,
-    normalize: true,
   });
+  wavesurfer.on('ready', function() {
+    playPauseButton.classList.toggle('is-loading');
+  });
+
   wavesurfer.load('/media/healthcare-confusion-audio-trailer.mp3');
 
   playPauseButton.addEventListener('click', function(){
     wavesurfer.playPause();
+    icon.classList.toggle('audio-player__icon--play');
+    icon.classList.toggle('audio-player__icon--pause');
   });
 }
-//
-// BackgroundImageFromRadioButtonUpdater.prototype = {
-//   update: function() {
-//     this.imageTarget.css("background-image", "url(" + this.radioGroup.filter(":checked").val() + ")");
-//   }
-// }
 
 
 

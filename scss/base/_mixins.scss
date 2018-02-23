@@ -257,3 +257,11 @@ $animation-speed: .3s !default;
   font-size: $pxSize;
   font-size: ($pxSize / 10px) + rem;
 }
+
+@mixin animation($attributes) {
+  -webkit-animation: $attributes;
+  -moz-animation: $attributes;
+  -ms-animation: $attributes;
+  -o-animation: $attributes;
+  animation: $attributes;
+}

@@ -45,10 +45,13 @@
   line-height: 29px;
   margin: 0 0 29px; }
 
+.healthcare-confusion-intro__audio-player-container {
+  margin-top: 54px; }
+
 .healthcare-confusion-intro__call-to-action {
   margin: auto;
   text-align: center;
-  margin-top: 54px; }
+  margin-top: 36px; }
 
 .healthcare-confusion-intro__call-to-action .button {
   display: block; }

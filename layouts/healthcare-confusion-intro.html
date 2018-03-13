@@ -10,12 +10,16 @@
 
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
 	<link rel="stylesheet" type="text/css" href="/css/layouts/healthcare-confusion-intro.css">
+	<link rel="stylesheet" type="text/css" href="/css/layouts/audio-player.css">
 
 
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700%7cSource+Serif+Pro:400,600" rel="stylesheet">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
 	<script>window.jQuery || document.write('<script src="js/jquery-1.12.4.min.js" defer><\/script>')</script>
-	<script src="/js/jquery.main.js" defer></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.4.0/wavesurfer.min.js"></script>
+	<script src="/js/audio-player.js" defer></script>
+
 </head>
 
 <body>
@@ -41,7 +45,39 @@
 				<p class="healthcare-confusion-intro__paragraph">As Cody and Dan have explained, when it comes to health care in America, you have options. There are options that allow you to be both stewards of your finances, and of your health care.</p>
 				<p class="healthcare-confusion-intro__paragraph"><strong>Samaritan Ministries’ Biblical model of health care sharing is one of those options.</strong> With this unique approach, there are no insurance companies or restrictive networks, and the members make all the choices about their health care with no interference from third parties. </p>
 				<p class="healthcare-confusion-intro__paragraph">It truly is putting members back in the driver’s seat, and giving them the control to make the health care decisions that are best for their families, and their wallets.</p>
-				<div class="healthcare-confusion-intro__call-to-action"><a href="#" class="button button--primary button--large button--purple">Download the Program</a></div>		
+				<div class="healthcare-confusion-intro__call-to-action"><a href="#" class="button button--primary button--large button--purple">Download the Program</a></div>
+			</div>
+		</section>
+
+		<br>
+		<br>
+		<br>
+		<br>
+
+		<section class="healthcare-confusion-intro">
+			<div class="container">
+				<h1 class="healthcare-confusion-intro__heading">Are you ready to become a better steward of your health care?</h1>
+				<p class="healthcare-confusion-intro__paragraph">As Cody and Dan have explained, when it comes to health care in America, you have options. There are options that allow you to be both stewards of your finances, and of your health care.</p>
+				<p class="healthcare-confusion-intro__paragraph"><strong>Samaritan Ministries’ Biblical model of health care sharing is one of those options.</strong> With this unique approach, there are no insurance companies or restrictive networks, and the members make all the choices about their health care with no interference from third parties. </p>
+				<p class="healthcare-confusion-intro__paragraph">It truly is putting members back in the driver’s seat, and giving them the control to make the health care decisions that are best for their families, and their wallets.</p>
+
+				<div class="healthcare-confusion-intro__audio-player-container">
+					<section class="audio-player">
+						<div class="audio-player__container">
+							<div class="audio-player__controls">
+								<button class="audio-player__play-pause-button" data-action="play-pause">
+									<span class="audio-player__icon audio-player__icon--play"></span>
+								</button>
+							</div>
+							<h2 class="audio-player__heading">Preview Program</h2>
+							<div class="audio-player__waveform-container">
+				      	<div class="audio-player__waveform" id="waveform"></div>
+							</div>
+						</div>
+					</section>
+				</div>
+
+				<div class="healthcare-confusion-intro__call-to-action"><a href="#" class="button button--primary button--large button--purple">Download the Program</a></div>
 			</div>
 		</section>
 

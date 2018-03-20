@@ -2,6 +2,7 @@
 // Color calculator - http://razorjam.github.io/sasscolourfunctioncalculator/
 // Color names - http://name-of-color.com/
 
+$white: #fff;
 $black: #24292c;
 $gray: #7f7f7f;
 $gray-background: #E5E6E5;
@@ -16,11 +17,21 @@ $light-marine: #6dcad2;
 $dark-marine: #3f847a;
 $green: #3db772;
 $dark-green: #2fb9ac;
+$dark-red: #ab2066;
+
+$basic-orange: #faa443;
+$classic-purple: #9669aa;
+$share-red: #ab2066;
+$iua-pink: #f0567c;
+$sharing-percentage-green: #6bcad2;
+$maternity-blue: #7ab2e0;
+$maternity-light-blue: #ebf3fb;
+$max-shareable-purple: #af93c5;
+
 
 $text-color: $black;
 
 $base-font-sans-serif: 'Source Sans Pro', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
-$base-font-serif: 'Source Serif Pro', 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
 
 // Body
 $base-text-color: $text-color !default;

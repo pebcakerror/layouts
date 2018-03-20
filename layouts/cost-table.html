@@ -3,113 +3,212 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Samaritan-Ministries</title>
+	<title>Cost Table</title>
 
 	<link media="all" rel="stylesheet" href="/css/main.css">
 	<link media="all" rel="stylesheet" href="/css/layouts/cost-table.css">
 
 
 
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700%7cSource+Serif+Pro:400,600" rel="stylesheet">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
-	<script>window.jQuery || document.write('<script src="/js/jquery-1.12.4.min.js" defer><\/script>')</script>
-	<script src="/js/jquery.main.js" defer></script>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
 </head>
 <body>
-	<div id="wrapper">
 
 
-		<!-- Cpst Table -->
-		<section class="cost-table">
-			<div class="cost-table__container">
-				<!-- price information -->
-				<div class="cost-info same-height">
-					<div class="cost-info__col cost-info__col--basic">
-						<strong class="cost-info__title"><img src="/images/samaritan-basic.jpg" height="62" width="198" alt="image description"></strong>
-						<div class="cost-info-holder height">
-							<div class="cost-info-holder__description">
-								<strong class="cost-info-holder__title">Monthly Share</strong>
-								<p class="cost-info-holder__paragraph">The amount you send directly to other members each month</p>
-							</div>
-							<div class="cost-description">
-								<span class="cost-description__cost">$100-$400 <span class="cost-description__text">pre <br> month</span></span>
-								<span class="cost-description__plan-name">Based on age & household size</span>
-							</div>
-						</div>
-					</div>
-					<div class="cost-info__col cost-info__col--classic">
-						<strong class="cost-info__title"><img src="/images/samaritan-classic.jpg" height="62" width="198" alt="image description"></strong>
-						<div class="cost-info-holder height">
-							<div class="cost-description">
-								<span class="cost-description__cost">$160-$495 <span class="cost-description__text">pre <br> month</span></span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="full-cost-info">
-					<div class="cost-item cost-item--initial-item">
-						<div class="cost-item__description">
-							<div class="cost-item__icon-wrap">
-								<img src="/images/initial-unshareable.svg" width="54" height="54" alt="image description">
-							</div>
-							<div class="text">
-								<h3 class="cost-item__heading">Initial Unshareable</h3>
-								<p class="cost-item__paragraph">Sharing starts once a Need exceeds this threshold.</p>
-							</div>
-						</div>
-						<div class="cost-col">
-							<div class="cost-col__item cost-col__item--basic"><strong class="cost-col__cost">$1,500</strong></div>
-							<div class="cost-col__item cost-col__item--classic"><strong class="cost-col__cost">$300</strong></div>
-						</div>
-					</div>
-					<div class="cost-item cost-item--sharing-item">
-						<div class="cost-item__description">
-							<div class="cost-item__icon-wrap">
-								<img src="/images/sharing-percentage.svg" width="53" height="53" alt="image description">
-							</div>
-							<div class="text">
-								<h3 class="cost-item__heading">Sharing Percentage</h3>
-								<p class="cost-item__paragraph">The amount shareable once past the initial unshareable.</p>
-							</div>
-						</div>
-						<div class="cost-col">
-							<div class="cost-col__item cost-col__item--basic"><strong class="cost-col__cost">90%</strong></div>
-							<div class="cost-col__item cost-col__item--classic"><strong class="cost-col__cost">100%</strong></div>
-						</div>
-					</div>
-					<div class="cost-item cost-item--maternity-item">
-						<div class="cost-item__description">
-							<div class="cost-item__icon-wrap">
-								<img src="/images/maternity-limit.svg" width="47" height="53" alt="image description">
-							</div>
-							<div class="text">
-								<h3 class="cost-item__heading">Maternity Limit</h3>
-								<p class="cost-item__paragraph">The max that can be shared for a maternity Need.</p>
-							</div>
-						</div>
-						<div class="cost-col">
-							<div class="cost-col__item cost-col__item--basic"><strong class="cost-col__cost">5,000</strong></div>
-							<div class="cost-col__item cost-col__item--classic"><strong class="cost-col__cost">250,000</strong></div>
-						</div>
-					</div>
-					<div class="cost-item cost-item--shareable-item">
-						<div class="cost-item__description">
-							<div class="cost-item__icon-wrap">
-								<img src="/images/max-shareable.svg" width="53" height="47" alt="image description">
-							</div>
-							<div class="text">
-								<h3 class="cost-item__heading">Max Shareable</h3>
-								<p class="cost-item__paragraph">The maximum that’s shareable per Need.</p>
-							</div>
-						</div>
-						<div class="cost-col">
-							<div class="cost-col__item cost-col__item--basic"><strong class="cost-col__cost">236,500</strong></div>
-							<div class="cost-col__item cost-col__item--classic"><strong class="cost-col__cost">250,000</strong></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	</div>
+<div class="cost-table">
+  <div class="cost-table__row cost-table__row--titles">
+
+    <div class="feature feature--titles">
+      <div class="feature__description"></div>
+      <div class="feature__basic">
+
+        <h1 class="membership-level-title membership-level-title--basic">
+    			<img class="membership-level-title__image membership-level-title__image--basic" src="/images/samaritan-basic.jpg" alt="Samaritan Basic">
+    		</h1>
+
+      </div>
+      <div class="feature_divider"></div>
+      <div class="feature__classic">
+
+        <h1 class="membership-level-title membership-level-title--classic">
+    			<img class="membership-level-title__image membership-level-title__image--classic" src="/images/samaritan-classic.jpg" alt="Samaritan Basic">
+    		</h1>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="cost-table__row cost-table__row--monthly-share">
+
+    <div class="feature feature--monthly-share">
+      <div class="feature__description">
+
+        <div class="feature-info feature-info--monthly-share">
+          <div class="feature-info__icon-container">
+            <img class="feature-info__icon" src="/images/monthly-share.svg" alt="">
+          </div>
+          <h2 class="feature-info__title">Monthly Share</h2>
+          <h3 class="feature-info__subhead">Based on age & household size</h3>
+          <p class="feature-info__description">The amount you send directly <br>
+            to other members each month</p>
+        </div>
+
+      </div>
+      <div class="feature__basic">
+
+        <div class="share-amount share-amount--basic">
+          <div class="share-amount__cost">
+            $100–$400
+          </div>
+          <div class="share-amount__frequency">
+            per month
+          </div>
+        </div>
+
+      </div>
+      <div class="feature_divider"></div>
+      <div class="feature__classic">
+
+        <div class="share-amount share-amount--classic">
+          <div class="share-amount__cost">
+            $160–$495
+          </div>
+          <div class="share-amount__frequency">
+            per month
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="cost-table__row cost-table__row--iua">
+
+    <div class="feature feature--iua">
+
+      <div class="feature__description">
+        <div class="feature-info feature-info--iua">
+          <div class="feature-info__icon-container">
+            <img class="feature-info__icon" src="/images/initial-unshareable.svg" alt="">
+          </div>
+          <h2 class="feature-info__title">Initial Unshareable</h2>
+          <p class="feature-info__description">Sharing starts once a Need<br>
+            exceeds this threshold.</p>
+        </div>
+      </div>
+
+      <div class="feature__basic">
+        $1,500
+      </div>
+
+      <div class="feature_divider"></div>
+
+      <div class="feature__classic">
+        $300
+      </div>
+
+    </div>
+
+  </div>
+  <div class="cost-table__row cost-table__row--share-percent">
+
+    <div class="feature feature--share-percent">
+      <div class="feature__description">
+
+        <div class="feature-info feature-info--share-percent">
+          <div class="feature-info__icon-container">
+            <img class="feature-info__icon" src="/images/sharing-percentage.svg" alt="">
+          </div>
+          <h2 class="feature-info__title">Sharing Percentage</h2>
+          <p class="feature-info__description">TThe amount shareable once <br>
+            past the initial unshareable.</p>
+        </div>
+
+      </div>
+      <div class="feature__basic">
+        90%
+      </div>
+      <div class="feature_divider"></div>
+      <div class="feature__classic">
+        100%
+      </div>
+
+    </div>
+
+  </div>
+  <div class="cost-table__row cost-table__row--maternity">
+
+    <div class="feature feature--maternity">
+      <div class="feature__description">
+
+        <div class="feature-info feature-info--maternity">
+          <div class="feature-info__icon-container">
+            <img class="feature-info__icon" src="/images/maternity-limit.svg" alt="">
+          </div>
+          <h2 class="feature-info__title">Maternity Limit</h2>
+          <p class="feature-info__description">The amount shareable once <br>
+            past the initial unshareable.</p>
+        </div>
+
+      </div>
+      <div class="feature__basic">
+
+        <div class="maternity-details maternity-details--basic">
+          <p class="maternity-details__case maternity-details__case--two-person">
+            <span class="maternity-details__household-size">2+ Person:</span> <span class="maternity-details__limit">$5,000</span>
+          </p>
+          <p class="maternity-details__case maternity-details__case--one-person">
+            <span class="maternity-details__household-size">1 Person:</span> <span class="maternity-details__limit">See Details</span>
+          </p>
+        </div>
+
+      </div>
+      <div class="feature_divider"></div>
+      <div class="feature__classic">
+
+        <div class="maternity-details maternity-details--classic">
+          <p class="maternity-details__case maternity-details__case--two-person">
+            <span class="maternity-details__household-size">2+ Person:</span> <span class="maternity-details__limit">$250,000</span>
+          </p>
+          <p class="maternity-details__case maternity-details__case--one-person">
+            <span class="maternity-details__household-size">1 Person:</span> <span class="maternity-details__limit">See Details</span>
+          </p>
+        </div>
+
+      </div>
+      <div class="feature__extra-info">
+        A <strong>One-Person Membership is not eligible for maternity care sharing</strong> unless, prior to conception, the member either 1. Adds another member or 2. Signs up for Maternity Care Sharing.
+      </div>
+    </div>
+
+  </div>
+  <div class="cost-table__row cost-table__row--share-max">
+
+    <div class="feature feature--share-max">
+      <div class="feature__description">
+
+        <div class="feature-info feature-info--share-max">
+          <div class="feature-info__icon-container">
+            <img class="feature-info__icon" src="/images/max-shareable.svg" alt="">
+          </div>
+          <h2 class="feature-info__title">Max Shareable</h2>
+          <p class="feature-info__description">The maximum that’s shareable <br>
+            per Need.</p>
+        </div>
+
+      </div>
+      <div class="feature__basic">
+        $236,500
+      </div>
+      <div class="feature_divider"></div>
+      <div class="feature__classic">
+        $250,000
+      </div>
+
+    </div>
+
+  </div>
+</div>
 </body>
 </html>

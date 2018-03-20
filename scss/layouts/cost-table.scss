@@ -23,502 +23,858 @@ $media-expressions: (
 @import '../base/variables';
 @import '../base/helpers';
 
-/* statistic */
-.cost-table {
-	padding: 25px 0 20px;
-	color: $base-text-color;
-	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
-	background: $white;
 
-	@include media(">=tablet") {
-		padding: 62px 0 52px;
-	}
 
-	@include media(">=desktop") {
-		font-size: 24px;
-		line-height: 30px;
-	}
 
-	*, *:before, *:after {
-		box-sizing: border-box;
-	}
+
+
+
+
+.cost-table__row {
+  padding: 16px 0;
+  border-bottom: 1px solid #d4d4d4;
 }
 
-.cost-table__container {
-	max-width: 904px;
-	margin: 0 auto;
-	padding: 0 15px;
+.cost-table__row--titles {
+  border-bottom: none;
 }
 
-/* price information */
-.cost-info {
-	color: $white;
-	font-size: 18px;
-	line-height: 1.6;
-	margin: 0 -15px;
-
-	@include media(">=tablet") {
-		display: flex;
-		font-size: 14px;
-		line-height: 1.4;
-		margin: 0;
-	}
-
-	@include media(">=desktop") {
-		font-size: 18px;
-		line-height: 1.6;
-	}
+.cost-table__row--monthly-share {
+  background-color: #f5f6f7;
+  border-top: 1px solid #d4d4d4;
 }
 
-.cost-info__col {
-	padding: 0 0 25px;
 
-	@include media(">=tablet") {
-		width: 72%;
-		position: relative;
-		z-index: 2;
-	}
 
-	@include media(">=desktop") {
-		width: 65%;
-	}
 
-	&:last-child{
-		@include media(">=tablet") {
-			width: 28%;
-		}
 
-		@include media(">=desktop") {
-			width: 35%;
-		}
-	}
+
+
+
+.feature {
+  display: grid;
+  grid-template-columns: 1fr 9px 1fr;
+  grid-template-areas:
+    'desc     desc      desc'
+    'basic    divider   classic';
+  grid-row-gap: 16px;
+  justify-items: center;
+  align-items: center;
+  max-width: 320px;
+  margin: auto;
 }
 
-.cost-info__col--basic {
-	@include media(">=tablet") {
-		text-align: right;
-	}
-
-	.cost-info-holder {
-		background: $orange;
-		text-align: left;
-
-		@include media(">=tablet", "<desktop") {
-			padding-left: 75px;
-		}
-
-		&:after {
-			background: $orange;
-			right: 0;
-			left: -9999px;
-		}
-	}
-
-	.cost-info__title {
-		color: $orange;
-
-		@include media(">=tablet", "<desktop") {
-			max-width: 40%;
-		}
-
-		@include media(">=tablet") {
-			margin-right: 11%;
-		}
-
-		@include media(">=desktop") {
-			margin-right: 10%;
-		}
-	}
+.feature__description {
+  grid-area: desc;
+  justify-self: stretch;
 }
 
-.cost-info__col--classic {
-	.cost-info-holder {
-		background: $light-purple;
-
-		&:after {
-			background: $light-purple;
-			left: 0;
-			right: -9999px;
-		}
-	}
-
-	.cost-info__title {
-		color: $light-purple;
-
-		@include media(">=tablet") {
-			margin-left: 9%;
-		}
-
-		@include media(">=desktop") {
-			margin-left: 17%;
-		}
-	}
+.feature__basic {
+  grid-area: basic;
+  font-family: $base-font-family;
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 36px;
+  color: $basic-orange;
 }
 
-.cost-info-holder {
-	position: relative;
-	padding: 10px 15px;
-
-	@include media(">=tablet") {
-		padding: 21px 15px 15px;
-	}
-
-	@include media(">=tablet") {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-
-	&:after {
-		content: '';
-		top: 0;
-		bottom: 0;
-		position: absolute;
-		z-index: -1;
-	}
+.feature_divider {
+  grid-area: divider;
+  width: 4px;
+  height: 100%;
+  min-height: 54px;
+  content: '';
+  background-color: $black;
+  border-radius: 4px;
 }
 
-.cost-info__title {
-	text-align: center;
-	display: block;
-	padding: 0 0 10px;
-	min-height: 84px;
-
-	@include media(">=tablet") {
-		display: inline-block;
-		vertical-align: top;
-		padding: 0 0 22px;
-	}
-
-	img {
-		max-width: 100%;
-		height: auto;
-		display: inline-block;
-		vertical-align: top;
-	}
+.feature__classic {
+  grid-area: classic;
+  font-family: $base-font-family;
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 36px;
+  color: $classic-purple;
 }
 
-.cost-info-holder__title {
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 1.2;
-	display: block;
-	margin: 0 0 1px;
 
-	@include media(">=tablet") {
-		font-size: 22px;
-	}
+.feature--titles {
+  grid-template-areas: 'basic divider classic';
 
-	@include media(">=desktop") {
-		font-size: 28px;
-	}
+  .feature__description {
+    display: none;
+  }
+
+  .feature_divider {
+    background-color: transparent;
+  }
 }
 
-.cost-info-holder__description {
-	@include media("<tablet") {
-		display: none;
-	}
-
-	@include media(">=tablet") {
-		width: 50%;
-		padding: 0 20px 0 0;
-	}
+.feature--monthly-share {
+  .feature_divider {
+    background-color: transparent;
+  }
 }
 
-.cost-info-holder__title {
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 1.2;
-	display: block;
-	margin: 0 0 1px;
-
-	@include media(">=tablet") {
-		font-size: 22px;
-	}
-
-	@include media(">=desktop") {
-		font-size: 28px;
-	}
+.feature--iua {
+  .feature_divider {
+    background-color: $iua-pink;
+  }
 }
 
-.cost-info-holder__paragraph {
-	margin: 0;
-	color: $white;
-	font-size: 18px;
-	line-height: 1.6;
-
-	@include media(">=tablet") {
-		font-size: 14px;
-		line-height: 1.4;
-	}
-
-	@include media(">=desktop") {
-		font-size: 18px;
-		line-height: 1.6;
-	}
+.feature--share-percent {
+  .feature_divider {
+    background-color: $sharing-percentage-green;
+  }
 }
 
-.cost-description {
-	position: relative;
-	text-align: center;
+.feature--maternity {
+  grid-template-areas:
+    'desc     desc      desc'
+    'basic    divider   classic'
+    'info     info      info';
 
-	@include media(">=tablet") {
-		width: 50%;
-		padding-right: 15px;
-	}
+  .feature__extra-info {
+    grid-area: info;
+    padding: 11px;
+    font-family: $base-font-family;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+    color: $base-text-color;
+    background-color: $maternity-light-blue;
+    border: 2px solid $maternity-blue;
+    border-radius: 10px;
 
-	@include media(">=desktop") {
-		padding-right: 35px;
-	}
+  }
+
+  .feature_divider {
+    background-color: $maternity-blue;
+  }
 }
 
-.cost-description__cost {
-	font-size: 36px;
-	line-height: 1.1;
-	font-weight: 300;
-	position: relative;
-	display: inline-block;
-	vertical-align: top;
-
-	@include media("<tablet") {
-		margin-left: -33px;
-	}
-
-	@include media(">=tablet") {
-		font-size: 30px;
-		white-space: nowrap;
-	}
-
-	@include media(">=desktop") {
-		font-size: 44px;
-	}
+.feature--share-max {
+  .feature_divider {
+    background-color: $max-shareable-purple;
+  }
 }
 
-.cost-description__text {
-	font-size: 12px;
-	line-height: 14px;
-	position: absolute;
-	left: 100%;
-	top: 50%;
-	transform: translateY(-50%);
-	margin-left: 5px;
-	font-weight: 400;
-	text-align: left;
 
-	@include media(">=tablet") {
-		font-size: 18px;
-		line-height: 1;
-	}
+
+
+
+
+
+
+.membership-level-title {
+  padding: 0;
+  margin: 0;
 }
 
-.full-cost-info {
-	@include media(">=tablet") {
-		padding: 47px 0 0;
-	}
+.membership-level-title__image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.cost-item {
-	margin: 0 0 25px;
 
-	@include media(">=tablet") {
-		display: flex;
-		flex-wrap: wrap;
-		font-size: 14px;
-		line-height: 1.4;
-		margin: 0 0 37px;
-	}
 
-	@include media(">=desktop") {
-		font-size: 18px;
-		line-height: 1.5;
-	}
+
+
+
+
+
+.feature-info {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas:
+    'icon title'
+    'icon description';
+  grid-column-gap: 16px;
+
 }
 
-.cost-item--initial-item {
-	.cost-item__heading {
-		color: #f0567c;
-	}
-
-	.cost-col__item {
-		&:after {
-			background: #f0567c;
-		}
-	}
+.feature-info__icon-container {
+  grid-area: icon;
 }
 
-.cost-item--sharing-item {
-	.cost-item__heading {
-		color: $light-marine;
-	}
-
-	.cost-col__item {
-		&:after {
-			background: $light-marine;
-		}
-	}
+.feature-info__icon {
+  display: block;
+  float: right;
+  width: 100%;
+  max-width: 54px;
+  height: auto;
+  margin-top: 10px;
 }
 
-.cost-item--maternity-item {
-	.cost-item__heading {
-		color: #7ab2e0;
-	}
+.feature-info__title {
+  grid-area: title;
+  padding: 0;
+  margin: 0;
+  font-family: $base-font-family;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 36px;
+  color: $base-text-color;
 
-	.cost-col__item {
-		&:after {
-			background: #7ab2e0;
-		}
-	}
+  @include media('>=tablet') {
+    grid-template-areas:
+      'icon title'
+      'icon subhead'
+      'icon description';
+  }
 }
 
-.cost-item--shareable-item {
-	.cost-item__heading {
-		color: #af93c5;
-	}
-
-	.cost-col__item {
-		&:after {
-			background: #af93c5;
-		}
-	}
+.feature-info__description {
+  grid-area: description;
+  padding: 0;
+  margin: 0;
+  font-family: $base-font-family;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $base-text-color;
 }
 
-.cost-item__description {
-	position: relative;
-	padding: 0 0 25px 75px;
 
-	@include media(">=tablet") {
-		width: 42%;
-		padding: 0 0 0 75px;
-	}
+.feature-info--monthly-share {
+  grid-template-rows: auto auto 30px;
+  grid-template-areas:
+    'icon title'
+    'icon description'
+    'subhead subhead';
 
-	@include media(">=desktop") {
-		padding: 0 0 0 16px;
-		width: 30%;
-	}
+  @include media('>=tablet') {
+    grid-template-areas:
+      'icon title'
+      'icon subhead'
+      'icon description';
+  }
+
+  .feature-info__subhead {
+    grid-area: subhead;
+    align-self: end;
+    justify-self: center;
+    padding-top: 12px;
+    margin: 0;
+    font-family: $base-font-family;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+    color: $base-text-color;
+  }
+
+  .feature-info__title {
+    color: $share-red;
+  }
 }
 
-.cost-item__icon-wrap {
-	position: absolute;
-	left: 0;
-	top: 6px;
-
-	@include media(">=tablet") {
-		left: 0;
-	}
-
-	@include media(">=desktop") {
-		left: -56px;
-	}
+.feature-info--iua {
+  .feature-info__title {
+    color: $iua-pink;
+  }
 }
 
-.cost-item__heading {
-	font-weight: 400;
-	font-size: 24px;
-	line-height: 1.2;
-	margin: 0 0 3px;
-
-	@include media(">=tablet") {
-		font-size: 22px;
-	}
-
-	@include media(">=desktop") {
-		font-size: 28px;
-	}
+.feature-info--maternity {
+  .feature-info__title {
+    color: $maternity-blue;
+  }
 }
 
-.cost-item__paragraph {
-	margin: 0 0 20px;
-	color: $base-text-color;
-	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
-	background: $white;
-
-	@include media(">=tablet") {
-		margin: 0 0 28px;
-	}
-
-	@include media(">=desktop") {
-		line-height: 1.5;
-	}
+.feature-info--share-percent {
+  .feature-info__title {
+    color: $sharing-percentage-green;
+  }
 }
 
-.cost-col {
-	text-align: center;
-	display: flex;
-	color: $white;
-	margin: 0 -15px;
-
-	@include media(">=tablet") {
-		width: 58%;
-		margin: 0;
-	}
-
-	@include media(">=desktop") {
-		width: 70%;
-	}
+.feature-info--share-max {
+  .feature-info__title {
+    color: $max-shareable-purple;
+  }
 }
 
-.cost-col__item {
-	width: 50%;
-	padding: 8px 15px;
 
-	@include media(">=tablet") {
-		padding: 0 20px;
-		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
 
-	&:after {
-		content: '';
-		bottom: 0;
-		left: 0;
-		right: 0;
-		position: absolute;
-		height: 2px;
 
-		@include media(">=tablet") {
-			height: auto;
-			right: auto;
-			top: 0;
-			width: 4px;
-			border-radius: 2em;
-		}
-	}
 
-	&:first-child {
-		&:after {
-			display: none;
-		}
-	}
+
+
+.share-amount {
+  padding: 12px;
+  border-radius: 10px;
 }
 
-.cost-col__item--basic {
-	@include media("<tablet") {
-		background: #faa443;
-	}
-
-	@include media(">=tablet") {
-		color: #faa443;
-	}
+.share-amount__cost {
+  font-family: $base-font-family;
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 29px;
+  color: $white;
+  text-align: right;
 }
 
-.cost-col__item--classic {
-	@include media("<tablet") {
-		background: #9669aa;
-	}
-
-	@include media(">=tablet") {
-		color: #9669aa;
-	}
+.share-amount__frequency {
+  font-family: $base-font-family;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  color: $white;
+  text-align: right;
 }
 
-.cost-col__cost {
-	font-weight: 400;
-	font-size: 24px;
-	line-height: 1;
 
-	@include media(">=tablet") {
-		font-size: 27px;
-	}
+.share-amount--basic {
+  background-color: $basic-orange;
 }
+
+.share-amount--classic {
+  background-color: $classic-purple;
+}
+
+
+
+
+
+
+
+
+.maternity-details {
+}
+
+.maternity-details__case {
+  padding: 0;
+  margin: 0;
+}
+
+.maternity-details__household-size {
+  display: block;
+  font-family: $base-font-family;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 23px;
+  text-align: center;
+}
+
+.maternity-details__limit {
+  display: block;
+  font-family: $base-font-family;
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 34px;
+  text-align: center;
+}
+
+.maternity-details__case--two-person {
+
+}
+
+.maternity-details__case--one-person {
+  display: none;
+}
+
+
+
+
+
+
+
+
+// /* statistic */
+// .cost-table {
+// 	padding: 25px 0 20px;
+// 	color: $base-text-color;
+// 	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+// 	background: $white;
+//
+// 	@include media(">=tablet") {
+// 		padding: 62px 0 52px;
+// 	}
+//
+// 	@include media(">=desktop") {
+// 		font-size: 24px;
+// 		line-height: 30px;
+// 	}
+//
+// 	*, *:before, *:after {
+// 		box-sizing: border-box;
+// 	}
+// }
+//
+// .cost-table__container {
+// 	max-width: 904px;
+// 	margin: 0 auto;
+// 	padding: 0 15px;
+// }
+//
+// /* price information */
+// .cost-info {
+// 	color: $white;
+// 	font-size: 18px;
+// 	line-height: 1.6;
+// 	margin: 0 -15px;
+//
+// 	@include media(">=tablet") {
+// 		display: flex;
+// 		font-size: 14px;
+// 		line-height: 1.4;
+// 		margin: 0;
+// 	}
+//
+// 	@include media(">=desktop") {
+// 		font-size: 18px;
+// 		line-height: 1.6;
+// 	}
+// }
+//
+// .cost-info__col {
+// 	padding: 0 0 25px;
+//
+// 	@include media(">=tablet") {
+// 		width: 72%;
+// 		position: relative;
+// 		z-index: 2;
+// 	}
+//
+// 	@include media(">=desktop") {
+// 		width: 65%;
+// 	}
+//
+// 	&:last-child{
+// 		@include media(">=tablet") {
+// 			width: 28%;
+// 		}
+//
+// 		@include media(">=desktop") {
+// 			width: 35%;
+// 		}
+// 	}
+// }
+//
+// .cost-info__col--basic {
+// 	@include media(">=tablet") {
+// 		text-align: right;
+// 	}
+//
+// 	.cost-info-holder {
+// 		background: $orange;
+// 		text-align: left;
+//
+// 		@include media(">=tablet", "<desktop") {
+// 			padding-left: 75px;
+// 		}
+//
+// 		&:after {
+// 			background: $orange;
+// 			right: 0;
+// 			left: -9999px;
+// 		}
+// 	}
+//
+// 	.cost-info__title {
+// 		color: $orange;
+//
+// 		@include media(">=tablet", "<desktop") {
+// 			max-width: 40%;
+// 		}
+//
+// 		@include media(">=tablet") {
+// 			margin-right: 11%;
+// 		}
+//
+// 		@include media(">=desktop") {
+// 			margin-right: 10%;
+// 		}
+// 	}
+// }
+//
+// .cost-info__col--classic {
+// 	.cost-info-holder {
+// 		background: $light-purple;
+//
+// 		&:after {
+// 			background: $light-purple;
+// 			left: 0;
+// 			right: -9999px;
+// 		}
+// 	}
+//
+// 	.cost-info__title {
+// 		color: $light-purple;
+//
+// 		@include media(">=tablet") {
+// 			margin-left: 9%;
+// 		}
+//
+// 		@include media(">=desktop") {
+// 			margin-left: 17%;
+// 		}
+// 	}
+// }
+//
+// .cost-info-holder {
+// 	position: relative;
+// 	padding: 10px 15px;
+//
+// 	@include media(">=tablet") {
+// 		padding: 21px 15px 15px;
+// 	}
+//
+// 	@include media(">=tablet") {
+// 		display: flex;
+// 		align-items: center;
+// 		justify-content: space-between;
+// 	}
+//
+// 	&:after {
+// 		content: '';
+// 		top: 0;
+// 		bottom: 0;
+// 		position: absolute;
+// 		z-index: -1;
+// 	}
+// }
+//
+// .cost-info__title {
+// 	text-align: center;
+// 	display: block;
+// 	padding: 0 0 10px;
+// 	min-height: 84px;
+//
+// 	@include media(">=tablet") {
+// 		display: inline-block;
+// 		vertical-align: top;
+// 		padding: 0 0 22px;
+// 	}
+//
+// 	img {
+// 		max-width: 100%;
+// 		height: auto;
+// 		display: inline-block;
+// 		vertical-align: top;
+// 	}
+// }
+//
+// .cost-info-holder__title {
+// 	font-weight: 400;
+// 	font-size: 18px;
+// 	line-height: 1.2;
+// 	display: block;
+// 	margin: 0 0 1px;
+//
+// 	@include media(">=tablet") {
+// 		font-size: 22px;
+// 	}
+//
+// 	@include media(">=desktop") {
+// 		font-size: 28px;
+// 	}
+// }
+//
+// .cost-info-holder__description {
+// 	@include media("<tablet") {
+// 		display: none;
+// 	}
+//
+// 	@include media(">=tablet") {
+// 		width: 50%;
+// 		padding: 0 20px 0 0;
+// 	}
+// }
+//
+// .cost-info-holder__title {
+// 	font-weight: 400;
+// 	font-size: 18px;
+// 	line-height: 1.2;
+// 	display: block;
+// 	margin: 0 0 1px;
+//
+// 	@include media(">=tablet") {
+// 		font-size: 22px;
+// 	}
+//
+// 	@include media(">=desktop") {
+// 		font-size: 28px;
+// 	}
+// }
+//
+// .cost-info-holder__paragraph {
+// 	margin: 0;
+// 	color: $white;
+// 	font-size: 18px;
+// 	line-height: 1.6;
+//
+// 	@include media(">=tablet") {
+// 		font-size: 14px;
+// 		line-height: 1.4;
+// 	}
+//
+// 	@include media(">=desktop") {
+// 		font-size: 18px;
+// 		line-height: 1.6;
+// 	}
+// }
+//
+// .cost-description {
+// 	position: relative;
+// 	text-align: center;
+//
+// 	@include media(">=tablet") {
+// 		width: 50%;
+// 		padding-right: 15px;
+// 	}
+//
+// 	@include media(">=desktop") {
+// 		padding-right: 35px;
+// 	}
+// }
+//
+// .cost-description__cost {
+// 	font-size: 36px;
+// 	line-height: 1.1;
+// 	font-weight: 300;
+// 	position: relative;
+// 	display: inline-block;
+// 	vertical-align: top;
+//
+// 	@include media("<tablet") {
+// 		margin-left: -33px;
+// 	}
+//
+// 	@include media(">=tablet") {
+// 		font-size: 30px;
+// 		white-space: nowrap;
+// 	}
+//
+// 	@include media(">=desktop") {
+// 		font-size: 44px;
+// 	}
+// }
+//
+// .cost-description__text {
+// 	font-size: 12px;
+// 	line-height: 14px;
+// 	position: absolute;
+// 	left: 100%;
+// 	top: 50%;
+// 	transform: translateY(-50%);
+// 	margin-left: 5px;
+// 	font-weight: 400;
+// 	text-align: left;
+//
+// 	@include media(">=tablet") {
+// 		font-size: 18px;
+// 		line-height: 1;
+// 	}
+// }
+//
+// .full-cost-info {
+// 	@include media(">=tablet") {
+// 		padding: 47px 0 0;
+// 	}
+// }
+//
+// .cost-item {
+// 	margin: 0 0 25px;
+//
+// 	@include media(">=tablet") {
+// 		display: flex;
+// 		flex-wrap: wrap;
+// 		font-size: 14px;
+// 		line-height: 1.4;
+// 		margin: 0 0 37px;
+// 	}
+//
+// 	@include media(">=desktop") {
+// 		font-size: 18px;
+// 		line-height: 1.5;
+// 	}
+// }
+//
+// .cost-item--initial-item {
+// 	.cost-item__heading {
+// 		color: #f0567c;
+// 	}
+//
+// 	.cost-col__item {
+// 		&:after {
+// 			background: #f0567c;
+// 		}
+// 	}
+// }
+//
+// .cost-item--sharing-item {
+// 	.cost-item__heading {
+// 		color: $light-marine;
+// 	}
+//
+// 	.cost-col__item {
+// 		&:after {
+// 			background: $light-marine;
+// 		}
+// 	}
+// }
+//
+// .cost-item--maternity-item {
+// 	.cost-item__heading {
+// 		color: #7ab2e0;
+// 	}
+//
+// 	.cost-col__item {
+// 		&:after {
+// 			background: #7ab2e0;
+// 		}
+// 	}
+// }
+//
+// .cost-item--shareable-item {
+// 	.cost-item__heading {
+// 		color: #af93c5;
+// 	}
+//
+// 	.cost-col__item {
+// 		&:after {
+// 			background: #af93c5;
+// 		}
+// 	}
+// }
+//
+// .cost-item__description {
+// 	position: relative;
+// 	padding: 0 0 25px 75px;
+//
+// 	@include media(">=tablet") {
+// 		width: 42%;
+// 		padding: 0 0 0 75px;
+// 	}
+//
+// 	@include media(">=desktop") {
+// 		padding: 0 0 0 16px;
+// 		width: 30%;
+// 	}
+// }
+//
+// .cost-item__icon-wrap {
+// 	position: absolute;
+// 	left: 0;
+// 	top: 6px;
+//
+// 	@include media(">=tablet") {
+// 		left: 0;
+// 	}
+//
+// 	@include media(">=desktop") {
+// 		left: -56px;
+// 	}
+// }
+//
+// .cost-item__heading {
+// 	font-weight: 400;
+// 	font-size: 24px;
+// 	line-height: 1.2;
+// 	margin: 0 0 3px;
+//
+// 	@include media(">=tablet") {
+// 		font-size: 22px;
+// 	}
+//
+// 	@include media(">=desktop") {
+// 		font-size: 28px;
+// 	}
+// }
+//
+// .cost-item__paragraph {
+// 	margin: 0 0 20px;
+// 	color: $base-text-color;
+// 	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+// 	background: $white;
+//
+// 	@include media(">=tablet") {
+// 		margin: 0 0 28px;
+// 	}
+//
+// 	@include media(">=desktop") {
+// 		line-height: 1.5;
+// 	}
+// }
+//
+// .cost-col {
+// 	text-align: center;
+// 	display: flex;
+// 	color: $white;
+// 	margin: 0 -15px;
+//
+// 	@include media(">=tablet") {
+// 		width: 58%;
+// 		margin: 0;
+// 	}
+//
+// 	@include media(">=desktop") {
+// 		width: 70%;
+// 	}
+// }
+//
+// .cost-col__item {
+// 	width: 50%;
+// 	padding: 8px 15px;
+//
+// 	@include media(">=tablet") {
+// 		padding: 0 20px;
+// 		position: relative;
+// 		display: flex;
+// 		align-items: center;
+// 		justify-content: center;
+// 	}
+//
+// 	&:after {
+// 		content: '';
+// 		bottom: 0;
+// 		left: 0;
+// 		right: 0;
+// 		position: absolute;
+// 		height: 2px;
+//
+// 		@include media(">=tablet") {
+// 			height: auto;
+// 			right: auto;
+// 			top: 0;
+// 			width: 4px;
+// 			border-radius: 2em;
+// 		}
+// 	}
+//
+// 	&:first-child {
+// 		&:after {
+// 			display: none;
+// 		}
+// 	}
+// }
+//
+// .cost-col__item--basic {
+// 	@include media("<tablet") {
+// 		background: #faa443;
+// 	}
+//
+// 	@include media(">=tablet") {
+// 		color: #faa443;
+// 	}
+// }
+//
+// .cost-col__item--classic {
+// 	@include media("<tablet") {
+// 		background: #9669aa;
+// 	}
+//
+// 	@include media(">=tablet") {
+// 		color: #9669aa;
+// 	}
+// }
+//
+// .cost-col__cost {
+// 	font-weight: 400;
+// 	font-size: 24px;
+// 	line-height: 1;
+//
+// 	@include media(">=tablet") {
+// 		font-size: 27px;
+// 	}
+// }

@@ -30,18 +30,27 @@ $media-expressions: (
 
 
 
-.cost-table__row {
-  padding: 16px 0;
-  border-bottom: 1px solid #d4d4d4;
+.cost-table {
+  @include media('>=desktop') {
+    max-width: 768px;
+    margin: auto;
+  }
 }
 
 .cost-table__row--titles {
+  // padding: 16px;
   border-bottom: none;
 }
 
 .cost-table__row--monthly-share {
   background-color: #f5f6f7;
   border-top: 1px solid #d4d4d4;
+  border-bottom: 1px solid #d4d4d4;
+
+  @include media('>=desktop') {
+    border: 1px solid #d4d4d4;
+    border-radius: 10px;
+  }
 }
 
 
@@ -52,16 +61,39 @@ $media-expressions: (
 
 
 .feature {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 9px 1fr;
   grid-template-areas:
     'desc     desc      desc'
     'basic    divider   classic';
   grid-row-gap: 16px;
-  justify-items: center;
+  justify-items: stretch;
   align-items: center;
   max-width: 320px;
+  padding: 16px;
   margin: auto;
+
+  @include media('>=tablet') {
+    grid-template-columns: 2fr 1fr 9px 1fr;
+    grid-template-areas: 'desc basic divider classic';
+    max-width: 768px;
+  }
+}
+
+.feature::after {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+  width: calc(100% - 32px);
+  height: 1px;
+  content: '';
+  background: #d4d4d4;
+
+  @include media('>=tablet') {
+    left: 86px;
+    width: calc(100% - 102px);
+  }
 }
 
 .feature__description {
@@ -76,6 +108,7 @@ $media-expressions: (
   font-weight: 300;
   line-height: 36px;
   color: $basic-orange;
+  text-align: center;
 }
 
 .feature_divider {
@@ -95,11 +128,21 @@ $media-expressions: (
   font-weight: 300;
   line-height: 36px;
   color: $classic-purple;
+  text-align: center;
 }
 
 
 .feature--titles {
   grid-template-areas: 'basic divider classic';
+  border-bottom: none;
+
+  @include media('>=tablet') {
+    grid-template-areas: 'desc basic divider classic';
+  }
+
+  &::after {
+    background: transparent;
+  }
 
   .feature__description {
     display: none;
@@ -111,6 +154,12 @@ $media-expressions: (
 }
 
 .feature--monthly-share {
+  border-bottom: none;
+
+  &::after {
+    background: transparent;
+  }
+
   .feature_divider {
     background-color: transparent;
   }
@@ -134,6 +183,12 @@ $media-expressions: (
     'basic    divider   classic'
     'info     info      info';
 
+  @include media('>=tablet') {
+    grid-template-areas:
+      'desc  basic divider classic'
+      'empty info  info    info';
+  }
+
   .feature__extra-info {
     grid-area: info;
     padding: 11px;
@@ -154,6 +209,10 @@ $media-expressions: (
 }
 
 .feature--share-max {
+  &::after {
+    background: transparent;
+  }
+
   .feature_divider {
     background-color: $max-shareable-purple;
   }
@@ -175,6 +234,11 @@ $media-expressions: (
   display: block;
   width: 100%;
   height: auto;
+  margin: auto;
+
+  @include media('>=tablet') {
+    width: 90%;
+  }
 }
 
 
@@ -186,12 +250,15 @@ $media-expressions: (
 
 .feature-info {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 54px 1fr;
   grid-template-areas:
     'icon title'
     'icon description';
-  grid-column-gap: 16px;
+  grid-column-gap: 10px;
 
+  @include media('>=tablet') {
+    grid-column-gap: 16px;
+  }
 }
 
 .feature-info__icon-container {
@@ -216,13 +283,6 @@ $media-expressions: (
   font-weight: 400;
   line-height: 36px;
   color: $base-text-color;
-
-  @include media('>=tablet') {
-    grid-template-areas:
-      'icon title'
-      'icon subhead'
-      'icon description';
-  }
 }
 
 .feature-info__description {
@@ -245,6 +305,7 @@ $media-expressions: (
     'subhead subhead';
 
   @include media('>=tablet') {
+    grid-template-rows: auto auto auto;
     grid-template-areas:
       'icon title'
       'icon subhead'
@@ -262,6 +323,13 @@ $media-expressions: (
     font-weight: 600;
     line-height: 18px;
     color: $base-text-color;
+
+    @include media('>=tablet') {
+      justify-self: start;
+      align-self: center;
+      padding-top: 0;
+      line-height: 26px;
+    }
   }
 
   .feature-info__title {
@@ -302,6 +370,14 @@ $media-expressions: (
 .share-amount {
   padding: 12px;
   border-radius: 10px;
+
+  @include media('>=tablet') {
+    padding: 16px;
+  }
+}
+
+.share-amount__container {
+  display: inline-block;
 }
 
 .share-amount__cost {
@@ -311,6 +387,11 @@ $media-expressions: (
   line-height: 29px;
   color: $white;
   text-align: right;
+
+  @include media('>=tablet') {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .share-amount__frequency {
@@ -338,9 +419,6 @@ $media-expressions: (
 
 
 
-.maternity-details {
-}
-
 .maternity-details__case {
   padding: 0;
   margin: 0;
@@ -364,10 +442,6 @@ $media-expressions: (
   text-align: center;
 }
 
-.maternity-details__case--two-person {
-
-}
-
 .maternity-details__case--one-person {
   display: none;
 }
@@ -379,502 +453,88 @@ $media-expressions: (
 
 
 
-// /* statistic */
-// .cost-table {
-// 	padding: 25px 0 20px;
-// 	color: $base-text-color;
-// 	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
-// 	background: $white;
-//
-// 	@include media(">=tablet") {
-// 		padding: 62px 0 52px;
-// 	}
-//
-// 	@include media(">=desktop") {
-// 		font-size: 24px;
-// 		line-height: 30px;
-// 	}
-//
-// 	*, *:before, *:after {
-// 		box-sizing: border-box;
-// 	}
-// }
-//
-// .cost-table__container {
-// 	max-width: 904px;
-// 	margin: 0 auto;
-// 	padding: 0 15px;
-// }
-//
-// /* price information */
-// .cost-info {
-// 	color: $white;
-// 	font-size: 18px;
-// 	line-height: 1.6;
-// 	margin: 0 -15px;
-//
-// 	@include media(">=tablet") {
-// 		display: flex;
-// 		font-size: 14px;
-// 		line-height: 1.4;
-// 		margin: 0;
-// 	}
-//
-// 	@include media(">=desktop") {
-// 		font-size: 18px;
-// 		line-height: 1.6;
-// 	}
-// }
-//
-// .cost-info__col {
-// 	padding: 0 0 25px;
-//
-// 	@include media(">=tablet") {
-// 		width: 72%;
-// 		position: relative;
-// 		z-index: 2;
-// 	}
-//
-// 	@include media(">=desktop") {
-// 		width: 65%;
-// 	}
-//
-// 	&:last-child{
-// 		@include media(">=tablet") {
-// 			width: 28%;
-// 		}
-//
-// 		@include media(">=desktop") {
-// 			width: 35%;
-// 		}
-// 	}
-// }
-//
-// .cost-info__col--basic {
-// 	@include media(">=tablet") {
-// 		text-align: right;
-// 	}
-//
-// 	.cost-info-holder {
-// 		background: $orange;
-// 		text-align: left;
-//
-// 		@include media(">=tablet", "<desktop") {
-// 			padding-left: 75px;
-// 		}
-//
-// 		&:after {
-// 			background: $orange;
-// 			right: 0;
-// 			left: -9999px;
-// 		}
-// 	}
-//
-// 	.cost-info__title {
-// 		color: $orange;
-//
-// 		@include media(">=tablet", "<desktop") {
-// 			max-width: 40%;
-// 		}
-//
-// 		@include media(">=tablet") {
-// 			margin-right: 11%;
-// 		}
-//
-// 		@include media(">=desktop") {
-// 			margin-right: 10%;
-// 		}
-// 	}
-// }
-//
-// .cost-info__col--classic {
-// 	.cost-info-holder {
-// 		background: $light-purple;
-//
-// 		&:after {
-// 			background: $light-purple;
-// 			left: 0;
-// 			right: -9999px;
-// 		}
-// 	}
-//
-// 	.cost-info__title {
-// 		color: $light-purple;
-//
-// 		@include media(">=tablet") {
-// 			margin-left: 9%;
-// 		}
-//
-// 		@include media(">=desktop") {
-// 			margin-left: 17%;
-// 		}
-// 	}
-// }
-//
-// .cost-info-holder {
-// 	position: relative;
-// 	padding: 10px 15px;
-//
-// 	@include media(">=tablet") {
-// 		padding: 21px 15px 15px;
-// 	}
-//
-// 	@include media(">=tablet") {
-// 		display: flex;
-// 		align-items: center;
-// 		justify-content: space-between;
-// 	}
-//
-// 	&:after {
-// 		content: '';
-// 		top: 0;
-// 		bottom: 0;
-// 		position: absolute;
-// 		z-index: -1;
-// 	}
-// }
-//
-// .cost-info__title {
-// 	text-align: center;
-// 	display: block;
-// 	padding: 0 0 10px;
-// 	min-height: 84px;
-//
-// 	@include media(">=tablet") {
-// 		display: inline-block;
-// 		vertical-align: top;
-// 		padding: 0 0 22px;
-// 	}
-//
-// 	img {
-// 		max-width: 100%;
-// 		height: auto;
-// 		display: inline-block;
-// 		vertical-align: top;
-// 	}
-// }
-//
-// .cost-info-holder__title {
-// 	font-weight: 400;
-// 	font-size: 18px;
-// 	line-height: 1.2;
-// 	display: block;
-// 	margin: 0 0 1px;
-//
-// 	@include media(">=tablet") {
-// 		font-size: 22px;
-// 	}
-//
-// 	@include media(">=desktop") {
-// 		font-size: 28px;
-// 	}
-// }
-//
-// .cost-info-holder__description {
-// 	@include media("<tablet") {
-// 		display: none;
-// 	}
-//
-// 	@include media(">=tablet") {
-// 		width: 50%;
-// 		padding: 0 20px 0 0;
-// 	}
-// }
-//
-// .cost-info-holder__title {
-// 	font-weight: 400;
-// 	font-size: 18px;
-// 	line-height: 1.2;
-// 	display: block;
-// 	margin: 0 0 1px;
-//
-// 	@include media(">=tablet") {
-// 		font-size: 22px;
-// 	}
-//
-// 	@include media(">=desktop") {
-// 		font-size: 28px;
-// 	}
-// }
-//
-// .cost-info-holder__paragraph {
-// 	margin: 0;
-// 	color: $white;
-// 	font-size: 18px;
-// 	line-height: 1.6;
-//
-// 	@include media(">=tablet") {
-// 		font-size: 14px;
-// 		line-height: 1.4;
-// 	}
-//
-// 	@include media(">=desktop") {
-// 		font-size: 18px;
-// 		line-height: 1.6;
-// 	}
-// }
-//
-// .cost-description {
-// 	position: relative;
-// 	text-align: center;
-//
-// 	@include media(">=tablet") {
-// 		width: 50%;
-// 		padding-right: 15px;
-// 	}
-//
-// 	@include media(">=desktop") {
-// 		padding-right: 35px;
-// 	}
-// }
-//
-// .cost-description__cost {
-// 	font-size: 36px;
-// 	line-height: 1.1;
-// 	font-weight: 300;
-// 	position: relative;
-// 	display: inline-block;
-// 	vertical-align: top;
-//
-// 	@include media("<tablet") {
-// 		margin-left: -33px;
-// 	}
-//
-// 	@include media(">=tablet") {
-// 		font-size: 30px;
-// 		white-space: nowrap;
-// 	}
-//
-// 	@include media(">=desktop") {
-// 		font-size: 44px;
-// 	}
-// }
-//
-// .cost-description__text {
-// 	font-size: 12px;
-// 	line-height: 14px;
-// 	position: absolute;
-// 	left: 100%;
-// 	top: 50%;
-// 	transform: translateY(-50%);
-// 	margin-left: 5px;
-// 	font-weight: 400;
-// 	text-align: left;
-//
-// 	@include media(">=tablet") {
-// 		font-size: 18px;
-// 		line-height: 1;
-// 	}
-// }
-//
-// .full-cost-info {
-// 	@include media(">=tablet") {
-// 		padding: 47px 0 0;
-// 	}
-// }
-//
-// .cost-item {
-// 	margin: 0 0 25px;
-//
-// 	@include media(">=tablet") {
-// 		display: flex;
-// 		flex-wrap: wrap;
-// 		font-size: 14px;
-// 		line-height: 1.4;
-// 		margin: 0 0 37px;
-// 	}
-//
-// 	@include media(">=desktop") {
-// 		font-size: 18px;
-// 		line-height: 1.5;
-// 	}
-// }
-//
-// .cost-item--initial-item {
-// 	.cost-item__heading {
-// 		color: #f0567c;
-// 	}
-//
-// 	.cost-col__item {
-// 		&:after {
-// 			background: #f0567c;
-// 		}
-// 	}
-// }
-//
-// .cost-item--sharing-item {
-// 	.cost-item__heading {
-// 		color: $light-marine;
-// 	}
-//
-// 	.cost-col__item {
-// 		&:after {
-// 			background: $light-marine;
-// 		}
-// 	}
-// }
-//
-// .cost-item--maternity-item {
-// 	.cost-item__heading {
-// 		color: #7ab2e0;
-// 	}
-//
-// 	.cost-col__item {
-// 		&:after {
-// 			background: #7ab2e0;
-// 		}
-// 	}
-// }
-//
-// .cost-item--shareable-item {
-// 	.cost-item__heading {
-// 		color: #af93c5;
-// 	}
-//
-// 	.cost-col__item {
-// 		&:after {
-// 			background: #af93c5;
-// 		}
-// 	}
-// }
-//
-// .cost-item__description {
-// 	position: relative;
-// 	padding: 0 0 25px 75px;
-//
-// 	@include media(">=tablet") {
-// 		width: 42%;
-// 		padding: 0 0 0 75px;
-// 	}
-//
-// 	@include media(">=desktop") {
-// 		padding: 0 0 0 16px;
-// 		width: 30%;
-// 	}
-// }
-//
-// .cost-item__icon-wrap {
-// 	position: absolute;
-// 	left: 0;
-// 	top: 6px;
-//
-// 	@include media(">=tablet") {
-// 		left: 0;
-// 	}
-//
-// 	@include media(">=desktop") {
-// 		left: -56px;
-// 	}
-// }
-//
-// .cost-item__heading {
-// 	font-weight: 400;
-// 	font-size: 24px;
-// 	line-height: 1.2;
-// 	margin: 0 0 3px;
-//
-// 	@include media(">=tablet") {
-// 		font-size: 22px;
-// 	}
-//
-// 	@include media(">=desktop") {
-// 		font-size: 28px;
-// 	}
-// }
-//
-// .cost-item__paragraph {
-// 	margin: 0 0 20px;
-// 	color: $base-text-color;
-// 	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
-// 	background: $white;
-//
-// 	@include media(">=tablet") {
-// 		margin: 0 0 28px;
-// 	}
-//
-// 	@include media(">=desktop") {
-// 		line-height: 1.5;
-// 	}
-// }
-//
-// .cost-col {
-// 	text-align: center;
-// 	display: flex;
-// 	color: $white;
-// 	margin: 0 -15px;
-//
-// 	@include media(">=tablet") {
-// 		width: 58%;
-// 		margin: 0;
-// 	}
-//
-// 	@include media(">=desktop") {
-// 		width: 70%;
-// 	}
-// }
-//
-// .cost-col__item {
-// 	width: 50%;
-// 	padding: 8px 15px;
-//
-// 	@include media(">=tablet") {
-// 		padding: 0 20px;
-// 		position: relative;
-// 		display: flex;
-// 		align-items: center;
-// 		justify-content: center;
-// 	}
-//
-// 	&:after {
-// 		content: '';
-// 		bottom: 0;
-// 		left: 0;
-// 		right: 0;
-// 		position: absolute;
-// 		height: 2px;
-//
-// 		@include media(">=tablet") {
-// 			height: auto;
-// 			right: auto;
-// 			top: 0;
-// 			width: 4px;
-// 			border-radius: 2em;
-// 		}
-// 	}
-//
-// 	&:first-child {
-// 		&:after {
-// 			display: none;
-// 		}
-// 	}
-// }
-//
-// .cost-col__item--basic {
-// 	@include media("<tablet") {
-// 		background: #faa443;
-// 	}
-//
-// 	@include media(">=tablet") {
-// 		color: #faa443;
-// 	}
-// }
-//
-// .cost-col__item--classic {
-// 	@include media("<tablet") {
-// 		background: #9669aa;
-// 	}
-//
-// 	@include media(">=tablet") {
-// 		color: #9669aa;
-// 	}
-// }
-//
-// .cost-col__cost {
-// 	font-weight: 400;
-// 	font-size: 24px;
-// 	line-height: 1;
-//
-// 	@include media(">=tablet") {
-// 		font-size: 27px;
-// 	}
-// }
+.membership-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.membership-label__image-container {
+
+}
+
+.membership-label__image {
+  display: block;
+  width: auto;
+  height: 18px;
+  padding-right: 6px;
+}
+
+.membership-label__text {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+.is-invalid {
+  .share-amount__cost,
+  .share-amount__frequency {
+    text-align: center;
+  }
+}
+
+
+
+.is-household-size-1 {
+  .share-amount__cost,
+  .share-amount__frequency {
+    text-align: center;
+  }
+
+  .feature--maternity {
+    grid-template-areas:
+      'desc     desc      desc'
+      'info     info      info';
+
+    @include media('>=tablet') {
+      grid-template-areas: 'desc info info info';
+    }
+
+    .feature__basic,
+    .feature_divider,
+    .feature__classic {
+      display: none;
+    }
+  }
+}
+
+.is-household-size-multi {
+  .share-amount__cost,
+  .share-amount__frequency {
+    text-align: center;
+  }
+
+  .feature--maternity {
+    grid-template-areas:
+      'desc     desc      desc'
+      'basic    divider   classic';
+
+    @include media('>=tablet') {
+      grid-template-areas: 'desc basic divider classic';
+    }
+
+    .feature__extra-info {
+      display: none;
+    }
+  }
+
+  .maternity-details__household-size {
+    display: none;
+  }
+}

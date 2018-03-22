@@ -10,10 +10,13 @@
   /* 2 */
   overflow: hidden; }
 
-@media (min-width: 1024px) {
-  .cost-table {
-    max-width: 768px;
-    margin: auto; } }
+.cost-table {
+  padding: 0;
+  margin: 0; }
+  @media (min-width: 1024px) {
+    .cost-table {
+      max-width: 768px;
+      margin: auto; } }
 
 .cost-table__row--titles {
   border-bottom: none; }
@@ -288,6 +291,14 @@
 
 .maternity-details__case--one-person {
   display: none; }
+
+.maternity-details--basic .maternity-details__household-size,
+.maternity-details--basic .maternity-details__limit {
+  color: #faa443; }
+
+.maternity-details--classic .maternity-details__household-size,
+.maternity-details--classic .maternity-details__limit {
+  color: #9669aa; }
 
 .membership-label {
   display: flex;

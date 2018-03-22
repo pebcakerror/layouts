@@ -31,6 +31,9 @@ $media-expressions: (
 
 
 .cost-table {
+  padding: 0;
+  margin: 0;
+
   @include media('>=desktop') {
     max-width: 768px;
     margin: auto;
@@ -446,6 +449,20 @@ $media-expressions: (
   display: none;
 }
 
+.maternity-details--basic {
+  .maternity-details__household-size,
+  .maternity-details__limit {
+    color: $basic-orange;
+  }
+}
+
+.maternity-details--classic {
+  .maternity-details__household-size,
+  .maternity-details__limit {
+    color: $classic-purple;
+  }
+}
+
 
 
 
@@ -457,10 +474,6 @@ $media-expressions: (
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.membership-label__image-container {
-
 }
 
 .membership-label__image {

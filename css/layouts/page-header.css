@@ -16,47 +16,61 @@
   align-items: center;
   justify-content: center;
   padding: 0;
-  background-position: 50% 30%;
-  background-repeat: no-repeat;
-  background-size: cover; }
-  .page-header:before {
-    content: '';
-    display: block;
-    width: 0;
-    max-height: 216px; }
-  .page-header:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: rgba(150, 105, 170, 0.64);
-    z-index: 1; }
+  background-color: #74417C; }
 
-.page-header.no-overlay:after {
-  background-color: transparent; }
+.page-header.image {
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+  background-size: cover; }
+
+.page-header.overlay::before {
+  display: block;
+  width: 0;
+  max-height: 216px;
+  content: ''; }
+.page-header.overlay::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: '';
+  background-color: rgba(150, 105, 170, 0.64); }
 
 .page-header__heading {
   position: relative;
-  padding: 36px;
   z-index: 2;
-  font-size: 32px;
-  line-height: 1.6;
+  padding: 18px;
+  margin: 0;
+  font-family: "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 36px;
   color: #fff;
-  text-align: center;
-  margin: 0; }
+  text-align: center; }
   @media (min-width: 480px) {
     .page-header__heading {
-      padding: 54px; } }
+      padding: 54px;
+      font-size: 36px;
+      line-height: 44px; } }
   @media (min-width: 768px) {
     .page-header__heading {
-      padding: 72px; } }
+      padding: 72px;
+      font-size: 54px;
+      line-height: 66px; } }
   .page-header__heading img {
+    display: block;
     width: 100%;
     max-width: 730px;
-    display: block;
     margin: auto; }
+
+@media (max-width: 346px) {
+  .page-header.christians-helping-christians .page-header__heading br {
+    display: none; } }
+@media (min-width: 480px) and (max-width: 521px) {
+  .page-header.christians-helping-christians .page-header__heading br {
+    display: none; } }
 
 .page-header.winterjam17 .page-header__heading img {
   width: 100%; }

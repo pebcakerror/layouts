@@ -1,21 +1,21 @@
 $breakpoints: (
-	'xs-phone': 320px,
-	'phone': 480px,
-	'tablet': 768px,
-	'desktop': 1024px,
-	'widescreen': 1200px
-	);
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1200px
+);
 
 // keywords
 $media-expressions: (
-	'screen': 'screen',
-	'print': 'print',
-	'handheld': 'handheld',
-	'landscape': '(orientation: landscape)',
-	'portrait': '(orientation: portrait)',
-	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
-	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
-	);
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
 
 @import '../vendors/include-media';
 @import '../base/mixins';
@@ -23,101 +23,117 @@ $media-expressions: (
 @import '../base/helpers';
 
 .page-header {
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0;
-	background-position: 50% 30%;
-	background-repeat: no-repeat;
-	background-size: cover;
-
-	&:before {
-		content: '';
-		display: block;
-		width: 0;
-		max-height: 216px;
-	}
-
-	&:after {
-		content: '';
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		right: 0;
-		left: 0;
-		background-color: rgba(#9669aa, .64);
-		z-index: 1;
-	}
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: $purple;
 }
 
-.page-header.no-overlay {
-	&:after {
-		background-color: transparent;
-	}
+.page-header.image {
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+  background-size: cover;
+}
+
+.page-header.overlay {
+  &::before {
+    display: block;
+    width: 0;
+    max-height: 216px;
+    content: '';
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: '';
+    background-color: rgba(#9669aa, .64);
+  }
 }
 
 .page-header__heading {
-	position: relative;
-	padding: 36px;
-	z-index: 2;
-	font-size: 32px;
-	line-height: 1.6;
-	color: $white;
-	text-align: center;
-	margin: 0;
+  position: relative;
+  z-index: 2;
+  padding: 18px;
+  margin: 0;
+  font-family: $base-font-family;
+  font-size: 27px;
+  font-weight: 300;
+  line-height: 36px;
+  color: $white;
+  text-align: center;
 
-	@include media(">=phone") {
-		padding: 54px;
-	}
+  @include media('>=phone') {
+    padding: 54px;
+    font-size: 36px;
+    line-height: 44px;
+  }
 
-	@include media(">=tablet") {
-		padding: 72px;
-	}
+  @include media('>=tablet') {
+    padding: 72px;
+    font-size: 54px;
+    line-height: 66px;
+  }
 
-	img {
-		width: 100%;
-		max-width: 730px;
-		display: block;
-		margin: auto;
-	}
+  img {
+    display: block;
+    width: 100%;
+    max-width: 730px;
+    margin: auto;
+  }
+}
+
+
+.page-header.christians-helping-christians .page-header__heading br {
+  @include media('<=346px') {
+    display: none;
+  }
+  @include media('>=phone', '<=521px') {
+    display: none;
+  }
 }
 
 
 .page-header.winterjam17 .page-header__heading img {
-	width: 100%;
+  width: 100%;
 
-	@include media(">phone") {
-		width: 90%;
-	}
+  @include media('>phone') {
+    width: 90%;
+  }
 
-	@include media(">desktop") {
-		width: 80%;
-	}
+  @include media('>desktop') {
+    width: 80%;
+  }
 }
 
 
 .page-header.winterjam18 .page-header__heading img {
-	width: 100%;
+  width: 100%;
 
-	@include media(">phone") {
-		width: 90%;
-	}
+  @include media('>phone') {
+    width: 90%;
+  }
 
-	@include media(">desktop") {
-		width: 80%;
-	}
+  @include media('>desktop') {
+    width: 80%;
+  }
 }
 
 
 .page-header.healthcare-confusion .page-header__heading img {
-	width: 70%;
+  width: 70%;
 
-	@include media(">phone") {
-		width: 80%;
-	}
+  @include media('>phone') {
+    width: 80%;
+  }
 
-	@include media(">desktop") {
-		width: 90%;
-	}
+  @include media('>desktop') {
+    width: 90%;
+  }
 }

@@ -11,45 +11,66 @@
   overflow: hidden; }
 
 .video-section {
-  padding: 35px 0 20px; }
-  @media (min-width: 1024px) {
+  padding: 18px; }
+  @media (min-width: 480px) {
     .video-section {
-      padding: 79px 0 28px; } }
+      padding: 26px; } }
+  @media (min-width: 768px) {
+    .video-section {
+      padding: 36px; } }
 
-.video-section__wrapper {
-  margin: 0 0 30px; }
-  @media (min-width: 1024px) {
-    .video-section__wrapper {
-      margin: 0 0 61px; } }
+.video-section__container {
+  max-width: 656px;
+  margin: auto; }
+
+.video-section__iframe-wrapper {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  margin-bottom: 26px;
+  overflow: hidden;
+  border: 0 solid transparent;
+  border-radius: 10px;
+  transform: translateY(0); }
 
 .video-introduction__iframe-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  border: 0; }
-  @media (min-width: 480px) {
-    .video-introduction__iframe-video {
-      height: 250px; } }
-  @media (min-width: 768px) {
-    .video-introduction__iframe-video {
-      height: 305px; } }
+  max-width: none;
+  height: 100%;
+  border: 0 solid transparent; }
 
 .video-section__heading {
-  color: #613061;
-  text-align: center;
-  font-size: 21px;
-  font-weight: 600;
-  margin: 0 0 15px; }
-  @media (min-width: 1024px) {
+  padding: 0 0 18px 0;
+  margin: 0;
+  font-family: "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #74417C; }
+  @media (min-width: 480px) {
     .video-section__heading {
-      font-size: 27px;
-      margin: 0 0 18px;
-      letter-spacing: -.3px; } }
+      font-size: 36px;
+      line-height: 44px;
+      text-align: center; } }
+  @media (min-width: 768px) {
+    .video-section__heading {
+      font-weight: 600; } }
 
 .video-section__paragraph {
-  color: #24292c;
+  padding: 0 0 18px 0;
+  margin: 0;
+  font-family: "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 18px;
-  margin: 0; }
-  @media (min-width: 1024px) {
-    .video-section__paragraph {
-      line-height: 2; } }
+  font-weight: 400;
+  line-height: 26px;
+  color: #24292c; }
+
+@media (max-width: 360px) {
+  .video-section.christians-helping-christians .video-section__heading br {
+    display: none; } }
 
 /*# sourceMappingURL=video-section.css.map */

@@ -1,0 +1,136 @@
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1200px
+);
+
+// keywords
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+@import '../vendors/include-media';
+@import '../base/mixins';
+@import '../base/variables';
+@import '../base/helpers';
+
+
+
+
+
+
+
+
+.media-kit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 36px;
+  margin: 0;
+  background-color: $maternity-blue;
+
+  @include media('>=tablet') {
+    flex-direction: row;
+  }
+}
+
+.media-kit__download-container {
+  padding: 0 0 18px;
+  margin: 0;
+
+  @include media('>=tablet') {
+    padding-right: 26px;
+  }
+
+  @include media('>=desktop') {
+    padding-right: 36px;
+  }
+}
+
+.media-kit__inquiries-container {
+  @include media('>=tablet') {
+    padding-left: 26px;
+  }
+
+  @include media('>=desktop') {
+    padding-left: 36px;
+  }
+}
+
+.button--download {
+  display: block;
+}
+
+
+
+
+
+
+
+
+.media-inquiries__heading {
+  padding: 0;
+  margin: 0;
+  font-family: $base-font-family;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 36px;
+  color: $white;
+}
+
+.media-inquiries__person {
+  padding: 5px 0 0 0;
+  margin: 0;
+  font-family: $base-font-family;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $white;
+}
+
+.media-inquiries__job-title {
+  padding: 0;
+  margin: 0;
+  font-family: $base-font-family;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 26px;
+  color: $white;
+}
+
+.media-inquiries__contact-container {
+  padding: 0;
+  margin: 5px 0 0 0;
+}
+
+
+
+
+
+
+
+.media-contact {
+  display: block;
+}
+
+.media-contact__icon::before {
+  color: $white;
+}
+
+.media-contact__telephone {
+  font-family: $base-font-family;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $white;
+}

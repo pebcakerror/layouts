@@ -1,0 +1,90 @@
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.ellipsis {
+  white-space: nowrap;
+  /* 1 */
+  text-overflow: ellipsis;
+  /* 2 */
+  overflow: hidden; }
+
+.media-kit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 36px;
+  margin: 0;
+  background-color: #7ab2e0; }
+  @media (min-width: 768px) {
+    .media-kit {
+      flex-direction: row; } }
+
+.media-kit__download-container {
+  padding: 0 0 18px;
+  margin: 0; }
+  @media (min-width: 768px) {
+    .media-kit__download-container {
+      padding-right: 26px; } }
+  @media (min-width: 1024px) {
+    .media-kit__download-container {
+      padding-right: 36px; } }
+
+@media (min-width: 768px) {
+  .media-kit__inquiries-container {
+    padding-left: 26px; } }
+@media (min-width: 1024px) {
+  .media-kit__inquiries-container {
+    padding-left: 36px; } }
+
+.button--download {
+  display: block; }
+
+.media-inquiries__heading {
+  padding: 0;
+  margin: 0;
+  font-family: "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #fff; }
+
+.media-inquiries__person {
+  padding: 5px 0 0 0;
+  margin: 0;
+  font-family: "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #fff; }
+
+.media-inquiries__job-title {
+  padding: 0;
+  margin: 0;
+  font-family: "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 26px;
+  color: #fff; }
+
+.media-inquiries__contact-container {
+  padding: 0;
+  margin: 5px 0 0 0; }
+
+.media-contact {
+  display: block; }
+
+.media-contact__icon::before {
+  color: #fff; }
+
+.media-contact__telephone {
+  font-family: "Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #fff; }
+
+/*# sourceMappingURL=media-kit.css.map */

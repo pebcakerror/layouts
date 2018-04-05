@@ -25,14 +25,14 @@ $media-expressions: (
 @import '../base/helpers';
 
 .video-section {
-  padding: 18px;
+  padding: 36px 18px;
 
   @include media('>=phone') {
-    padding: 26px;
+    padding: 52px 26px;
   }
 
   @include media('>=tablet') {
-    padding: 36px;
+    padding: 72px 36px;
   }
 }
 

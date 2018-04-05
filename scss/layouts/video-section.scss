@@ -1,20 +1,20 @@
 $breakpoints: (
-	'xs-phone': 320px,
-	'phone': 480px,
-	'tablet': 768px,
-	'desktop': 1024px,
-	'widescreen': 1200px
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1200px
 );
 
 // keywords
 $media-expressions: (
-	'screen': 'screen',
-	'print': 'print',
-	'handheld': 'handheld',
-	'landscape': '(orientation: landscape)',
-	'portrait': '(orientation: portrait)',
-	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
-	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
 );
 
 // ligatured operators ≥ ≤
@@ -25,54 +25,75 @@ $media-expressions: (
 @import '../base/helpers';
 
 .video-section {
-	padding: 35px 0 20px;
+  padding: 18px;
 
-	@include media(">=desktop") {
-		padding: 79px 0 28px;
-	}
+  @include media('>=phone') {
+    padding: 26px;
+  }
+
+  @include media('>=tablet') {
+    padding: 36px;
+  }
 }
 
-.video-section__wrapper {
-	margin: 0 0 30px;
+.video-section__container {
+  max-width: 656px;
+  margin: auto;
+}
 
-	@include media(">=desktop") {
-		margin: 0 0 61px;
-	}
+.video-section__iframe-wrapper {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 */
+  margin-bottom: 26px;
+  overflow: hidden;
+  border: 0 solid transparent;
+  border-radius: 10px;
+  transform: translateY(0);
 }
 
 .video-introduction__iframe-video {
-	width: 100%;
-	border: 0;
-
-	@include media(">=phone") {
-		height: 250px;
-	}
-
-	@include media(">=tablet") {
-		height: 305px;
-	}
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  border: 0 solid transparent;
 }
 
 .video-section__heading {
-	color: $purple;
-	text-align: center;
-	font-size: 21px;
-	font-weight: 600;
-	margin: 0 0 15px;
+  padding: 0 0 18px 0;
+  margin: 0;
+  font-family: $base-font-family;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 36px;
+  color: $purple;
 
-	@include media(">=desktop") {
-		font-size: 27px;
-		margin: 0 0 18px;
-		letter-spacing: -.3px;
-	}
+  @include media('>=phone') {
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+  }
+
+  @include media('>=tablet') {
+    font-weight: 600;
+  }
 }
 
 .video-section__paragraph {
-	color: $text-color;
-	font-size: 18px;
-	margin: 0;
+  padding: 0 0 18px 0;
+  margin: 0;
+  font-family: $base-font-family;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  color: $text-color;
+}
 
-	@include media(">=desktop") {
-		line-height: 2;
-	}
+.video-section.christians-helping-christians .video-section__heading br {
+  @include media('<=360px') {
+    display: none;
+  }
 }

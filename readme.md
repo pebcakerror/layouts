@@ -58,11 +58,11 @@
 
 ```
 $breakpoints: (
-  'tiny': 320px,
-  'small': 480px,
-  'medium': 640px,
-  'large': 1024px,
-  'huge': 1200px
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1200px
 );
 
 // keywords

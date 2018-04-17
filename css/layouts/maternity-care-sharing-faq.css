@@ -1,0 +1,29 @@
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.ellipsis {
+  white-space: nowrap;
+  /* 1 */
+  text-overflow: ellipsis;
+  /* 2 */
+  overflow: hidden; }
+
+.maternity-care-sharing-faq__container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto; }
+
+.maternity-care-sharing-faq__header {
+  margin-bottom: 20px; }
+
+.maternity-care-sharing-faq__line {
+  height: 2px;
+  color: #DDDDDD; }
+
+.maternity-care-sharing-faq__question {
+  color: #3F70C9;
+  font-size: 18px; }
+
+/*# sourceMappingURL=maternity-care-sharing-faq.css.map */

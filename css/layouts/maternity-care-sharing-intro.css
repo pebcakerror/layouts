@@ -1,0 +1,52 @@
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.ellipsis {
+  white-space: nowrap;
+  /* 1 */
+  text-overflow: ellipsis;
+  /* 2 */
+  overflow: hidden; }
+
+.maternity-care-sharing-intro__container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 650px; }
+
+.maternity-care-sharing-intro__header {
+  font-size: 35px;
+  color: #24292C;
+  margin-bottom: 72px;
+  line-height: 44px; }
+
+.maternity-care-sharing-intro__option-header {
+  color: #24292C;
+  margin: 0; }
+
+.maternity-care-sharing-intro__option-sub-header {
+  color: #24292C;
+  font-weight: 700;
+  margin: 0; }
+
+.maternity-care-sharing-intro__description {
+  color: #24292C;
+  margin: 0;
+  margin-bottom: 36px; }
+
+.maternity-care-sharing-intro__guidelines {
+  color: #24292C; }
+
+.maternity-care-sharing-intro__guideslines a {
+  color: #3F70C9; }
+
+.maternity-care-sharing-intro__button {
+  margin-top: 72px;
+  font-size: 21px;
+  color: #3F70C9;
+  border: 2px solid #3F70C9;
+  background-color: transparent;
+  padding: 6px; }
+
+/*# sourceMappingURL=maternity-care-sharing-intro.css.map */

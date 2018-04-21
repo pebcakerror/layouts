@@ -1,0 +1,73 @@
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1200px
+);
+
+// keywords
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+@import '../vendors/include-media';
+@import '../base/mixins';
+@import '../base/variables';
+@import '../base/helpers';
+
+
+.maternity-care-sharing-info {
+  margin: 0;
+  padding: 0;
+}
+
+.maternity-care-sharing-info__background {
+  background-color: #E6F1F9;
+}
+
+.maternity-care-sharing-info__container {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.maternity-care-sharing-info_image {
+  width: 327px;
+  margin: 0 auto;
+  display: block;
+  transform: translate(0%, 50%);
+  margin-top: -163.5px;
+}
+
+.maternity-care-sharing-info__header {
+  font-size: 35px;
+  color: #24292C;
+  padding-top: 26px;
+}
+
+.maternity-care-sharing-info__header:first-child {
+  padding-top: 235px;
+}
+
+.maternity-care-sharing-info__description:last-child {
+  padding-bottom: 108px;
+}
+
+.maternity-care-sharing-info__description {
+  font-style: 18px;
+  color: #24292C;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.maternity-care-sharing-info__description a {
+  text-decoration: underline;
+  color: #3F70C9;
+}

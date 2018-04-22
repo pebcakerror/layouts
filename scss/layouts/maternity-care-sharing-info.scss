@@ -22,7 +22,6 @@ $media-expressions: (
 @import '../base/variables';
 @import '../base/helpers';
 
-
 .maternity-care-sharing-info {
   margin: 0;
   padding: 0;
@@ -36,6 +35,15 @@ $media-expressions: (
   width: 100%;
   max-width: 650px;
   margin: 0 auto;
+  padding: 32px;
+
+  @include media('>=tablet') {
+    padding: 54px;
+  }
+
+  @include media('>=desktop') {
+    padding: 72px 0;
+  }
 }
 
 .maternity-care-sharing-info_image {
@@ -48,7 +56,7 @@ $media-expressions: (
 
 .maternity-care-sharing-info__header {
   font-size: 35px;
-  color: #24292C;
+  color: $text-color;
   padding-top: 26px;
 }
 
@@ -62,7 +70,7 @@ $media-expressions: (
 
 .maternity-care-sharing-info__description {
   font-style: 18px;
-  color: #24292C;
+  color: $text-color;
   margin-top: 18px;
   margin-bottom: 18px;
 }

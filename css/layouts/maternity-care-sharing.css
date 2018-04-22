@@ -1,0 +1,31 @@
+/* @import '../vendors/include-media'; */
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.ellipsis {
+  white-space: nowrap;
+  /* 1 */
+  text-overflow: ellipsis;
+  /* 2 */
+  overflow: hidden; }
+
+.foobar {
+  padding: 32px;
+  background-color: #E5E6E5;
+  /* @include media('>=tablet') {
+    padding: 54px;
+  }
+
+  @include media('>=desktop') {
+    padding: 72px 0;
+  } */ }
+
+.foobar__description {
+  font-size: 26px;
+  font-weight: 400;
+  color: #74417C;
+  text-align: center; }
+
+/*# sourceMappingURL=maternity-care-sharing.css.map */

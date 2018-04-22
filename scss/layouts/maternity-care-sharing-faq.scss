@@ -22,11 +22,23 @@ $media-expressions: (
 @import '../base/variables';
 @import '../base/helpers';
 
+.maternity-care-sharing-faq {
+  padding: 32px;
+
+  @include media('>=tablet') {
+    padding: 54px;
+  }
+
+  @include media('>=desktop') {
+    padding: 72px 0;
+  }
+}
 
 .maternity-care-sharing-faq__container {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+  position: relative;
 }
 
 .maternity-care-sharing-faq__header {
@@ -36,9 +48,146 @@ $media-expressions: (
 .maternity-care-sharing-faq__line {
   height: 2px;
   color: #DDDDDD;
+  margin: 0;
 }
 
+.maternity-care-sharing-faq__line:last-child {
+  margin-bottom: 108px
+}
+
+
 .maternity-care-sharing-faq__question {
+  display: grid;
+  grid-template-columns: 1fr 18px;
+  grid-gap: 40px;
+  position: relative;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+.maternity-care-sharing-faq__question p {
   color: #3F70C9;
   font-size: 18px;
+  margin: 0;
+}
+
+.maternity-care-sharing-faq__arrow {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0%,-50%);
+}
+
+.maternity-care-sharing-faq__answer p {
+  margin-top: 16px;
+  margin-bottom: 20px;
+  color: $text-color;
+}
+
+.maternity-care-sharing-faq__answer {
+  display: none;
+}
+
+.maternity-care-sharing-faq__answer.active {
+  display: block;
+}
+
+.maternity-care-sharing-faq__arrow.active {
+  transform: rotate(270deg) translate(0%, -50%);
+  margin-top: -16px;
+  margin-right: -8px;
+}
+
+.maternity-care-sharing-faq__contact {
+  position: absolute;
+  right: -289px;
+  width: 237px;
+  border: 2px solid #DDDDDD;
+  border-radius: 5px;
+
+  @include media('<=1200px') {
+    display: none;
+  }
+
+}
+
+.maternity-care-sharing-faq__contact-mobile {
+  width: 100%;
+  border: 2px solid #DDDDDD;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 1008px;
+
+  @include media('>=1200px') {
+    display: none;
+  }
+}
+
+.maternity-care-sharing-faq__phone {
+  color: #41464B;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.maternity-care-sharing-faq__hours {
+  color: #41464B;
+  font-size: 15px;
+  line-height: 25px;
+  margin-bottom: 4px;
+}
+
+.maternity-care-sharing-faq__mail {
+  color: #41464B;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.maternity-care-sharing-faq__address {
+  color: #41464B;
+  font-size: 15px;
+  margin-bottom: 24px;
+  margin-top: 0px;
+  line-height: 25px;
+}
+
+.maternity-care-sharing-faq__contact > div {
+  margin-left: 56px;
+}
+
+.maternity-care-sharing-faq__contact > h3 {
+  margin-left: 26px;
+  margin-top: 24px;
+  margin-bottom: 19px;
+}
+
+.maternity-care-sharing-faq__contact-mobile > div {
+  margin-left: 56px;
+}
+
+.maternity-care-sharing-faq__contact-mobile > h3 {
+  margin-left: 26px;
+  margin-top: 24px;
+  margin-bottom: 0px;
+}
+
+.maternity-care-sharing-faq__marker-icon {
+  margin-right: 5px;
+  height: 14px;
+}
+
+.maternity-care-sharing-faq__phone-icon {
+  height: 12px;
+  margin-right: 5px;
+  margin-bottom: 0px;
+}
+
+.maternity-care-sharing-faq__contact-container {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  padding-top: 0;
 }

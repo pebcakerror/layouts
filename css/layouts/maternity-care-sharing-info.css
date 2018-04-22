@@ -20,7 +20,14 @@
 .maternity-care-sharing-info__container {
   width: 100%;
   max-width: 650px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 32px; }
+  @media (min-width: 768px) {
+    .maternity-care-sharing-info__container {
+      padding: 54px; } }
+  @media (min-width: 1024px) {
+    .maternity-care-sharing-info__container {
+      padding: 72px 0; } }
 
 .maternity-care-sharing-info_image {
   width: 327px;

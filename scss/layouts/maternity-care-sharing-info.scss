@@ -52,6 +52,11 @@ $media-expressions: (
   display: block;
   transform: translate(0%, 50%);
   margin-top: -163.5px;
+
+  @include media('<=phone') {
+    width: 200px;
+    margin-top: -100px;
+  }
 }
 
 .maternity-care-sharing-info__header {

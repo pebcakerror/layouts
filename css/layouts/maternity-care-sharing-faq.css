@@ -60,7 +60,7 @@
 .maternity-care-sharing-faq__answer p {
   margin-top: 16px;
   margin-bottom: 20px;
-  color: #24292C; }
+  color: #24292c; }
 
 .maternity-care-sharing-faq__answer {
   display: none; }
@@ -70,7 +70,7 @@
 
 .maternity-care-sharing-faq__arrow.active {
   transform: rotate(270deg) translate(0%, -50%);
-  margin-top: -16px;
+  margin-top: -10px;
   margin-right: -8px; }
 
 .maternity-care-sharing-faq__contact {
@@ -148,5 +148,3 @@
   grid-template-columns: 1fr 1fr;
   padding: 20px;
   padding-top: 0; }
-
-/*# sourceMappingURL=maternity-care-sharing-faq.css.map */

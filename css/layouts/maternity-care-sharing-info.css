@@ -35,10 +35,14 @@
   display: block;
   transform: translate(0%, 50%);
   margin-top: -163.5px; }
+  @media (max-width: 480px) {
+    .maternity-care-sharing-info_image {
+      width: 200px;
+      margin-top: -100px; } }
 
 .maternity-care-sharing-info__header {
   font-size: 35px;
-  color: #24292C;
+  color: #24292c;
   padding-top: 26px; }
 
 .maternity-care-sharing-info__header:first-child {
@@ -49,12 +53,10 @@
 
 .maternity-care-sharing-info__description {
   font-style: 18px;
-  color: #24292C;
+  color: #24292c;
   margin-top: 18px;
   margin-bottom: 18px; }
 
 .maternity-care-sharing-info__description a {
   text-decoration: underline;
   color: #3F70C9; }
-
-/*# sourceMappingURL=maternity-care-sharing-info.css.map */

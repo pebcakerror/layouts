@@ -23,19 +23,19 @@ $media-expressions: (
 @import '../base/helpers';
 
 .maternity-care-sharing-info {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 .maternity-care-sharing-info__background {
-  background-color: #E6F1F9;
+  background-color: #e6f1f9;
 }
 
 .maternity-care-sharing-info__container {
   width: 100%;
   max-width: 650px;
-  margin: 0 auto;
   padding: 32px;
+  margin: 0 auto;
 
   @include media('>=tablet') {
     padding: 54px;
@@ -47,11 +47,11 @@ $media-expressions: (
 }
 
 .maternity-care-sharing-info_image {
+  display: block;
   width: 327px;
   margin: 0 auto;
-  display: block;
-  transform: translate(0%, 50%);
   margin-top: -163.5px;
+  transform: translate(0%, 50%);
 
   @include media('<=phone') {
     width: 200px;
@@ -60,9 +60,9 @@ $media-expressions: (
 }
 
 .maternity-care-sharing-info__header {
+  padding-top: 26px;
   font-size: 35px;
   color: $text-color;
-  padding-top: 26px;
 }
 
 .maternity-care-sharing-info__header:first-child {
@@ -74,13 +74,13 @@ $media-expressions: (
 }
 
 .maternity-care-sharing-info__description {
-  font-style: 18px;
-  color: $text-color;
   margin-top: 18px;
   margin-bottom: 18px;
+  font-style: 18px;
+  color: $text-color;
 }
 
 .maternity-care-sharing-info__description a {
+  color: #3f70c9;
   text-decoration: underline;
-  color: #3F70C9;
 }
